@@ -1,0 +1,7 @@
+{
+  "name": "Khabay",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

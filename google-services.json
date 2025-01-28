@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "911941069306",
+    "firebase_url": "https://khabayapp-6b07f.firebaseio.com",
+    "project_id": "khabayapp-6b07f",
+    "storage_bucket": "khabayapp-6b07f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911941069306:android:eb69ab416cfe958b",
+        "android_client_info": {
+          "package_name": "io.ionic.khabayapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911941069306-cej6e412ue9cj4mshe0ev0r259rbgn1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGM4d1_Ubl3r3hq2BYCpAphE97l6IqxS0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
