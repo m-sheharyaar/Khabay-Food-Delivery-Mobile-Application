@@ -1,0 +1,325 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start" (click)="back()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </div>
+        <div class="text_logo">
+            Shop Update
+        </div>
+    </div>
+</div>
+<ion-content>
+    <div class="card_Description">
+        <div class="tab-wrap">
+            <!-- tab1 -->
+            <input type="radio" name="tabs" id="tab1" checked>
+            <div class="tab-label-content" id="tab1-content">
+                <label class="tab-label" for="tab1">Basic Info</label>
+                <div class="tab-content">
+                    <div class="mainLinks">
+                        <ion-card class="cardMainLinks">
+                            <div class="tab-panel">
+                                <ion-item class="main">
+                                    <div class="text-field">
+                                        <div class="text-label">
+                                            <ion-label position="floating" style="color: #fb630f;">Shop Name</ion-label>
+                                            <ion-input class="inputField" type="text" id="shopName" name="l_shopName"
+                                                [(ngModel)]="l_shopName" (keyup)="formValidation()"
+                                                (ionChange)="formValidation()" maxlength="50"
+                                                (ngModelChange)="l_shopName=getFirstLetterCapital(l_shopName)"
+                                                (input)="l_shopNameLength=getLength($event.target.value,50)"
+                                                (keyup.enter)="UserGeocoder()">
+                                            </ion-input>
+                                        </div>
+                                        <div class="text-length">
+                                            {{l_shopNameLength}}
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="main">
+                                    <div class="text-field">
+                                        <div class="text-label">
+                                            <ion-label position="floating" style="color: #fb630f;">Address</ion-label>
+                                            <ion-input class="inputField" type="text" name="l_address"
+                                                [(ngModel)]="l_address" (keyup)="formValidation()"
+                                                (ionChange)="formValidation()" maxlength="500"
+                                                (ngModelChange)="l_address=getFirstLetterCapital(l_address)"
+                                                (input)="l_addressLength=getLength($event.target.value,500)"
+                                                (keyup.enter)="UserGeocoder()">
+                                            </ion-input>
+                                        </div>
+                                        <div class="text-length">
+                                            {{l_addressLength}}
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="main">
+                                    <ion-label style="color: #fb630f;">State</ion-label>
+                                    <ion-select [placeholder]="l_state" style="font-size: 13px;" [(ngModel)]="l_state"
+                                        (ionChange)="getAllCity()">
+                                        <ion-select-option *ngFor="let list of l_allStates">{{list.State}}
+                                        </ion-select-option>
+                                    </ion-select>
+                                </ion-item>
+                                <ion-item class="main">
+                                    <ion-label style="color: #fb630f;">City</ion-label>
+                                    <ion-select [placeholder]="l_city" [(ngModel)]="l_city" style="font-size: 13px;">
+                                        <ion-select-option *ngFor="let list of l_allCity">{{list.City}}
+                                        </ion-select-option>
+                                    </ion-select>
+                                </ion-item>
+                                <ion-item class="main">
+                                    <div class="text-field">
+                                        <div class="text-label">
+                                            <ion-label position="floating" style="color: #fb630f;">Mobile</ion-label>
+                                            <ion-input class="inputField" type="tel" name="l_mobile"
+                                                [(ngModel)]="l_mobile" (keyup)="formValidation()"
+                                                (ionChange)="formValidation()" maxlength="11"
+                                                (input)="l_mobileLength=getLength($event.target.value,11)"
+                                                (keyup.enter)="UserGeocoder()">
+                                            </ion-input>
+                                        </div>
+                                        <div class="text-length">
+                                            {{l_mobileLength}}
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="main">
+                                    <div class="text-field">
+                                        <div class="text-labelPhone">
+                                            <ion-label position="floating" style="color: #fb630f;">Phone</ion-label>
+                                            <ion-input type="tel" class="inputField" name="l_phone"
+                                                [(ngModel)]="l_phone" maxlength="11" placeholder=""
+                                                (input)="l_phoneLength=getLength($event.target.value,11)"
+                                                (keyup.enter)="UserGeocoder()">
+                                            </ion-input>
+                                        </div>
+                                        <div class="text-lengthPhone">
+                                            (Optional){{l_phoneLength}}
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="main">
+                                    <ion-label position="floating" style="color: #fb630f;">Opening Time</ion-label>
+                                    <ion-datetime class="inputField" display-format="hh:mm A" name="l_openingTime"
+                                        [(ngModel)]="l_openingTime" (keyup)="formValidation()"
+                                        (ionChange)="formValidation()" (keyup.enter)="UserGeocoder()"></ion-datetime>
+                                </ion-item>
+                                <ion-item class="main">
+                                    <ion-label position="floating" style="color: #fb630f;">Closing Time</ion-label>
+                                    <ion-datetime class="inputField" display-format="hh:mm A" name="l_openingTime"
+                                        [(ngModel)]="l_closingTime" (keyup)="formValidation()"
+                                        (ionChange)="formValidation()" (keyup.enter)="UserGeocoder()"></ion-datetime>
+                                </ion-item>
+                                <ion-item>
+                                    <div class="main">
+                                        <div class="text">
+                                            <ion-label position="floating" style="color: #fb630f;">Badge Title</ion-label>
+                                            <ion-input type="text" class="inputField" #myInput id="badgetitle" name="l_badgetitle"
+                                                [(ngModel)]="l_badgetitle" (keyup)="formValidation()"
+                                                (ngModelChange)="l_badgetitle=getFirstLetterCapital(l_badgetitle)"
+                                                (ionChange)="formValidation()" maxlength="50"
+                                                (input)="l_badgetitleLength=getLength($event.target.value,30)"></ion-input>
+                                        </div>
+                                        <div class="textLength">
+                                            {{l_badgetitleLength}}
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <div class="comment">
+                                        <ion-label>
+                                            <h3>Description <span>(Optional)</span>
+                                                <div class="text-length">
+                                                    {{l_descriptionLength}} Characters
+                                                </div>
+                                            </h3>
+                                        </ion-label>
+                                        <ion-textarea rows="3" class="comment-text" [(ngModel)]="l_description"
+                                            maxlength="1000"
+                                            (input)="l_descriptionLength=getLength($event.target.value,1000)">
+                                        </ion-textarea>
+                                    </div>
+                            </div>
+                        </ion-card>
+                    </div>
+                </div>
+            </div>
+            <!-- tab2 -->
+            <input type="radio" name="tabs" id="tab2">
+            <div class="tab-label-content" id="tab2-content">
+                <label class="tab-label" for="tab2">Promotions</label>
+                <div class="tab-content">
+                     <div class="mainLinks">
+                        <ion-card class="cardMainLinks">
+                            <div class="tab-panel">
+                                <div class="add">
+                                    <div class="btn">
+                                        <ion-button class="bton" fill="clear" color="light" id="add-more"
+                                            [ngClass]="isbtnDisabledpromo ? 'btn-disabled': 'btn-enable'" [attr.disabled]="isbtnDisabledpromo? true:false"
+                                            (click)="addpromo()">
+                                            {{promotionFormMode == 0? 'Add':'Save'}}
+                                        </ion-button>
+                                    </div>
+                                </div>
+                                <div class="mainLinks" *ngIf="l_promoList.length != 0">
+                                    <ion-card class="cardMainLinks">
+                                        <ion-item *ngFor="let list of l_promoList; let i = index">
+                                            <div class="list-1">
+                                                    <div class="left-section">
+                                                            <div class="title">{{list.Title}}</div>
+                                                            <div class="description">{{list.Description}}</div>
+                                                        </div>
+                                                        <div class="right-section">
+                                                                <div>{{list.Price}}</div>
+                                                                <div><ion-icon ios="ios-create" md="md-create" class="icon" (click)="edit(i)"></ion-icon> <ion-icon ios="ios-trash" md="md-trash" class="icon" (click)="delete(i)"></ion-icon></div>
+                                                        </div>
+                                                        
+                                            </div>
+                                         
+                                        </ion-item>
+                                    </ion-card>
+                                </div>
+                                <div class="mainLinks" [hidden]="promotionFormMode == 0? true: false">
+                                    <ion-card class="cardMainLinks">
+                                        <ion-item>
+                                            <div class="main">
+                                                <div class="text">
+                                                    <ion-label position="floating" style="color: #fb630f;">Title</ion-label>
+                                                    <ion-input class="inputField" type="text" name="l_title" [(ngModel)]="l_title"
+                                                        (keyup)="formValidationPromo()" (ionChange)="formValidationPromo()"
+                                                        (ngModelChange)="l_title=getFirstLetterCapital(l_title)" maxlength="50"
+                                                        (input)="l_titleLength=getLength($event.target.value,50)"></ion-input>
+                                                </div>
+                                                <div class="textLength">
+                                                    {{l_titleLength}}
+                                                </div>
+                                            </div>
+                                        </ion-item>
+                                        <ion-item>
+                                            <div class="main">
+                                                <div class="text">
+                                                    <ion-label position="floating" style="color: #fb630f;">Price</ion-label>
+                                                    <ion-input type="tel" class="inputField" [(ngModel)]="l_price" (keyup)="formValidationPromo()"
+                                                        (ionChange)="formValidationPromo()"></ion-input>
+                                                </div>
+                                                <div class="textLength">
+                                                    {{l_mobileLength}}
+                                                </div>
+                                            </div>
+                                        </ion-item>
+                                        <div class="comment">
+                                            <ion-label>
+                                                <h3>Description <span>(Optional)</span>
+                                                    <div class="text-length">
+                                                        {{l_descriptionpromoLength}} Characters
+                                                    </div>
+                                                </h3>
+                                            </ion-label>
+                                            <ion-textarea type="text" rows="3" class="comment-text" [(ngModel)]="l_descriptionpromo" maxlength="1000"
+                                                (input)="l_descriptionpromoLength=getLength($event.target.value,1000)">
+                                            </ion-textarea>
+                                        </div>
+                                        <div class="remove">
+                                            <div class="btn">
+                                                <ion-button class="bton remove-me" fill="clear" color="light" (click)="removepromo()">
+                                                    Cancel
+                                                </ion-button>
+                                            </div>
+                                        </div>
+                                    </ion-card>
+                                </div>
+                            </div>
+                        </ion-card>
+                    </div>
+                </div>
+            </div>
+            <!-- tab3 -->
+            <input type="radio" name="tabs" id="tab3">
+            <div class="tab-label-content" id="tab3-content">
+                <label class="tab-label" for="tab3">Discount</label>
+                <div class="tab-content">
+                    <div class="mainLinks">
+                        <ion-card class="cardMainLinks">
+                            <div class="tab-panel">
+                                <ion-item class="main">
+                                    <div class="text-field">
+                                        <div class="text-label">
+                                            <ion-label position="floating" style="color: #fb630f;">Discount</ion-label>
+                                            <ion-input class="inputField" type="number" name="l_discount"
+                                                [(ngModel)]="l_discount" (keyup.enter)="UserGeocoder()">
+                                            </ion-input>
+                                        </div>
+                                        <div class="text-length">
+                                            %
+                                        </div>
+                                    </div>
+                                </ion-item>
+                                <ion-item class="main">
+                                    <ion-label position="floating" style="color: #fb630f;">Start Date</ion-label>
+                                    <ion-datetime class="inputField" display-format="YYYY-MMM-DD" name="l_startDate"
+                                        min="{{l_minDate}}" [(ngModel)]="l_startDate" (keyup)="formValidation()"
+                                        (ionChange)="formValidation()" (keyup.enter)="UserGeocoder()"></ion-datetime>
+                                </ion-item>
+                                <ion-item class="main">
+                                    <ion-checkbox (ionChange)="hideExpiryDate()" [checked]="l_chkbox"
+                                        (keyup.enter)="UserGeocoder()">
+                                    </ion-checkbox><span>WithOut Expiry Date</span>
+                                </ion-item>
+                                <ion-item class="main" [hidden]="l_hideExpiryDate">
+                                    <ion-label position="floating" style="color: #fb630f;">Expiry Date</ion-label>
+                                    <ion-datetime class="inputField" display-format="YYYY-MMM-DD" name="l_endDate"
+                                        min="{{l_minDate}}" [(ngModel)]="l_endDate" (keyup)="formValidation()"
+                                        (ionChange)="formValidation()" (keyup.enter)="UserGeocoder()"></ion-datetime>
+                                </ion-item>
+                                &nbsp;
+                                <!-- &nbsp;
+                                <ion-list>
+                                    <ion-item class="main">
+                                        <ion-thumbnail slot="start">
+                                            <ion-img [src]="ImageURL"></ion-img>
+                                        </ion-thumbnail>
+                                        <ion-button slot="end" fill="clear" (click)="selectPhoto()"
+                                            style="color: #fb630f;">
+                                            <ion-icon slot="icon-only" name="cloud-upload"></ion-icon>
+                                        </ion-button>
+                                        <ion-button slot="end" fill="clear" (click)="removeTempImage()"
+                                            style="color: #fb630f;">
+                                            <ion-icon slot="icon-only" name="trash"></ion-icon>
+                                        </ion-button>
+                                    </ion-item>
+                                </ion-list>
+                               
+                                <ion-list>
+                                    <ion-item>
+                                        <ion-thumbnail slot="start">
+                                            <ion-img [src]="LogoURL"></ion-img>
+                                        </ion-thumbnail>
+                                        <ion-button slot="end" fill="clear" (click)="selectLogo()"
+                                            style="color: #fb630f;">
+                                            <ion-icon slot="icon-only" name="cloud-upload"></ion-icon>
+                                        </ion-button>
+                                        <ion-button slot="end" fill="clear" (click)="removelogoImage()"
+                                            style="color: #fb630f;">
+                                            <ion-icon slot="icon-only" name="trash"></ion-icon>
+                                        </ion-button>
+                                    </ion-item>
+                                </ion-list> -->
+                            </div>
+                        </ion-card>
+                    </div>
+                </div>
+            </div>
+            <div class="slide"></div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer>
+    <div class="footer">
+        <div class="btn">
+            <ion-button class="bton" fill="clear" color="light" [ngClass]="isbtnDisabled ? 'btn-disabled': 'btn-enable'"
+                [attr.disabled]="isbtnDisabled? true:null" (click)="UserGeocoder()">
+                Save
+            </ion-button>
+        </div>
+    </div>
+</ion-footer>

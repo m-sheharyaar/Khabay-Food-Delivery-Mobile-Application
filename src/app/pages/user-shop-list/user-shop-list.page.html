@@ -1,0 +1,74 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start">
+            <ion-icon name="ios-arrow-back" (click)="back()"></ion-icon>
+        </div>
+        <div class="text_logo">
+            My Shops
+        </div>
+    </div>
+    <div class="notify" (click)="openPopoverdeleteAll($event)">
+        <ion-icon class="notify-icon" name="ios-more" md="md-more"></ion-icon>
+    </div>
+</div>
+<ion-content class="cards-bg social-cards">
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="crescent">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div class="main_shops" *ngFor="let row of l_shopList">
+        <div class="card_main_pic">
+            <div class="card_main_pics">
+                <div class="card_pics" (click)="updateShop(row.ShopID)">
+                    <img class="pic" *ngIf="row.ImageURL === null" src="../../../assets/img/notfound.png">
+                    <img class="pic" *ngIf="row.ImageURL != null" src="{{env.imageURL + row.ImageURL}}">
+                </div>
+
+                <div class="card_dis">
+                    <div class="card_dis_text">
+                        {{row.Discount}}% off
+                    </div>
+                </div>
+                <div *ngIf="row.OfferStatus != null" class="card_exp">
+                    <div class="card_exp_text">
+                        {{row.OfferStatus}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ion-card class="card_main">
+            <div class="card_logo">
+                <img class="img" *ngIf="row.LogoURL === null" src="../../assets/img/logo.png">
+                <img class="img" *ngIf="row.LogoURL != null" src="{{env.imageURL + row.LogoURL}}">
+            </div>
+            <div class="card_text">
+                <div class="card_name_distance">
+                    <div class="card_name">
+                        {{commonService.getExtraTextHide(row.ShopName,'13')}}
+                    </div>
+                    <div class="card_distance" [hidden]="row.Status == 'Hide' ? 'true' : ''"
+                        (click)="gotoInformation(row.ShopID,row.Status)">
+                        <ion-icon class="card_distance_icon" name="ios-information-circle-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card_adress">
+                    <ion-icon name="pin" md="md-pin" class="card_adress_icon"></ion-icon>
+                    <h6>{{commonService.getExtraAddressHide(row.Address1, row.City, row.State,'26')}}</h6>
+                </div>
+                <div class="card_mainRating">
+                    <div [ngClass]="row.Status == 'Visible' ? 'textVisible' : 'textHide'"><b>Status: </b> {{row.Status}}
+                    </div>
+                    <ion-buttons class="card_more" (click)="openPopoverdelete($event,row.ShopID,row.Status)">
+                        <ion-icon name="ios-more"></ion-icon>
+                    </ion-buttons>
+                </div>
+            </div>
+        </ion-card>
+    </div>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+</ion-content>

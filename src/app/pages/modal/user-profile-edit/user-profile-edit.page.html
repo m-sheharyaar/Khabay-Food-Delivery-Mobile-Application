@@ -1,0 +1,50 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start" (click)="closeModel()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </div>
+        <div class="text_logo">
+            Profile Edit
+        </div>
+    </div>
+</div>
+<ion-content>
+    <div class="mainLinks">
+        <ion-card class="cardMainLinks">
+            <div class="name">
+                <ion-item>
+                    <ion-label position="floating" style="color: #fb630f;">User Name</ion-label>
+                    <ion-input type="text" class="name-text" required name="l_userName" [(ngModel)]="l_userName" readonly></ion-input>
+                </ion-item>
+            </div>
+            <div class="name">
+                <ion-item>
+                    <ion-label position="floating" style="color: #fb630f;">First Name</ion-label>
+                    <ion-input type="text" class="name-text" name="l_firstName" [(ngModel)]="l_firstName"
+                        (ngModelChange)="l_firstName=getFirstLetterCapital(l_firstName)"></ion-input>
+                </ion-item>
+            </div>
+            <div class="name">
+                <ion-item>
+                    <ion-label position="floating" style="color: #fb630f;">Last Name</ion-label>
+                    <ion-input type="text" class="name-text" required name="l_lastName" [(ngModel)]="l_lastName"
+                        (ngModelChange)="l_lastName=getFirstLetterCapital(l_lastName)"></ion-input>
+                </ion-item>
+            </div>
+            <div class="name">
+                <ion-item>
+                    <ion-label position="floating" style="color: #fb630f;">PhoneNumber</ion-label>
+                    <ion-input type="text" class="name-text" required name="l_phoneNumber" readonly
+                        [(ngModel)]="l_phoneNumber"></ion-input>
+                </ion-item>
+            </div>
+            <div class="footer">
+                <div class="btn">
+                    <ion-button class="bton" fill="clear" color="light" (click)="editUser()">
+                        OK
+                    </ion-button>
+                </div>
+            </div>
+        </ion-card>
+    </div>
+</ion-content>

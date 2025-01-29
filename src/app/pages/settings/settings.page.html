@@ -1,0 +1,97 @@
+<ion-content>
+    <ion-card class="maincardPic">
+        <div class="body">
+            <div class="card_pic">
+                <img src="../../../assets/img/settingPic.jpg" style="height: 100%" />
+            </div>
+            <div class="card_price">
+                <label>Setting</label>
+            </div>
+        </div>
+        <div class="sub-body">
+        </div>
+        <div class="maincardProfile">
+            <ion-card class="profileCard">
+                <div class="pic">
+                    <ion-avatar class="pic-circle">
+                        <div class="text-circle" *ngIf="l_oldImage === null">
+                            {{l_textForPic}}
+                        </div>
+                        <ion-img *ngIf="l_oldImage != null" [src]="ImageURL"></ion-img>
+                        <div class="change-pic">
+                            <ion-icon name="camera" class="camera-icon" (click)="selectPhoto()"></ion-icon>
+                        </div>
+                    </ion-avatar>
+                </div>
+                <div class="profileNameMain">
+                    <div class="profileName">
+                        {{l_firstName}} {{l_lastName}}
+                        <!-- {{l_userName}} -->
+                    </div>
+                    <div class="profileStatus">
+                        {{l_userStatus}}
+                    </div>
+                </div>
+            </ion-card>
+        </div>
+    </ion-card>
+    <div class="mainLinks">
+        <ion-card class="cardMainLinks">
+            <ul class="list">
+                <li class="list-menu" (click)="gotoProfile()">
+                    <ion-icon name="person"></ion-icon>
+                    <label>Profile</label>
+                    <ion-icon name="ios-arrow-back" class="goicon"></ion-icon>
+                </li>
+                <li class="list-menu" (click)="gotoNotification()">
+                    <ion-icon name="notifications"></ion-icon>
+                    <label>Notification</label>
+                    <ion-icon name="ios-arrow-back" class="goicon"></ion-icon>
+                </li>
+                <li class="list-menu" (click)="gotoFavourite()">
+                    <ion-icon name="heart"></ion-icon>
+                    <label>Favourite</label>
+                    <ion-icon name="ios-arrow-back" class="goicon"></ion-icon>
+                </li>
+                <li class="list-menu" (click)="gotoSuscribe()">
+                    <ion-icon name="notifications"></ion-icon>
+                    <label>Suscribe</label>
+                    <ion-icon name="ios-arrow-back" class="goicon"></ion-icon>
+                </li>
+                <li class="list-menu" (click)="gotoRegistershop()" [hidden]="!l_isShopAdmin">
+                    <ion-icon name="clipboard"></ion-icon>
+                    <label>Register Shop</label>
+                    <ion-icon name="ios-arrow-back" class="goicon"></ion-icon>
+                </li>
+                <li class="list-menu" (click)="gotoMyShop()" [hidden]="!l_isShopAdmin">
+                    <ion-icon name="ios-restaurant"></ion-icon>
+                    <label>My Shops</label>
+                    <ion-icon name="ios-arrow-back" class="goicon"></ion-icon>
+                </li>
+                <li class="list-menu" (click)="gotoAdminAproval()"
+                    [ngClass]="l_shopAdminStatusID == env.ShopAdminStatus.Approved ? 'hideAdminMenu': ''">
+                    <ion-icon class="icon" name="alert"
+                        [ngClass]="l_shopAdminStatusID == env.ShopAdminStatus.Blocked || l_shopAdminStatusID == env.ShopAdminStatus.Pending ? 'span-text-color': 'span-text'">
+                    </ion-icon>
+                    <span
+                        [ngClass]="l_shopAdminStatusID == env.ShopAdminStatus.Blocked || l_shopAdminStatusID == env.ShopAdminStatus.Pending ? 'span-text-color': 'span-text'"
+                        style=" padding: 0px 0px 0px 10px;">Request
+                        For Shop Admin</span>
+                    <span class="pending"
+                        [ngClass]="l_shopAdminStatusID == env.ShopAdminStatus.Blocked || l_shopAdminStatusID == env.ShopAdminStatus.Reject ? 'span-color': ''">{{l_shopAdminStatus}}</span>
+                    <ion-icon name="ios-arrow-back" class="goicon"></ion-icon>
+                </li>
+                <li class="list-menu" (click)="gotoHelp()">
+                    <ion-icon name="help"></ion-icon>
+                    <label>Help</label>
+                    <ion-icon name="ios-arrow-back" class="goicon"></ion-icon>
+                </li>
+                <li class="list-menu" (click)="logout()">
+                    <ion-icon name="log-out"></ion-icon>
+                    <label>Logout</label>
+                    <ion-icon name="ios-arrow-back" class="goicon"></ion-icon>
+                </li>
+            </ul>
+        </ion-card>
+    </div>
+</ion-content>

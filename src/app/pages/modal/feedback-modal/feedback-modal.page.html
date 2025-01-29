@@ -1,0 +1,44 @@
+<ion-content>
+    <div class="head-main">
+        <div class="main_menu">
+            <div class="menu" slot="start" (click)="closeModal()">
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </div>
+            <div class="text_logo">
+                Feedback
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="nameandrating">
+            <!-- <div class="name">
+                        <p class="fb-username">{{l_userName}}</p>
+                    </div> -->
+            <div class="rating">
+                <h4>Rate this shop <span><sup class="required">*</sup></span></h4>
+                <span *ngFor="let str of [5,4,3,2,1];">
+                    <ion-icon id="star_{{str}}" name="ios-star" class="star_rating" (click)="rating(str)"
+                        (keyup.enter)="insertCommentsAndRating()"></ion-icon>
+                </span>
+            </div>
+        </div>
+        <div class="comment">
+            <h3>Comment <span>(Optional)</span>
+                <div class="text-length">
+                    {{l_commentLength}} Characters
+                </div>
+            </h3>
+            <ion-textarea rows="12" class="comment-text" [(ngModel)]="l_comment" maxlength="1000"
+                (input)="l_commentLength=getLength($event.target.value,1000)" (keyup.enter)="insertCommentsAndRating()">
+            </ion-textarea>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="btn">
+            <ion-button class="bton" fill="clear" color="light" [disabled]="disabled"
+                (click)="insertCommentsAndRating()">
+                Submit
+            </ion-button>
+        </div>
+    </div>
+</ion-content>

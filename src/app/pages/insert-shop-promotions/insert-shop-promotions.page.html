@@ -1,0 +1,97 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start" (click)="back()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </div>
+        <div class="text_logo">
+            Shop Promotions
+        </div>
+    </div>
+</div>
+<ion-content>
+    <div class="add">
+        <div class="btn">
+            <ion-button class="bton" fill="clear" color="light" id="add-more"
+                [ngClass]="isbtnDisabled ? 'btn-disabled': 'btn-enable'" [attr.disabled]="isbtnDisabled? true:false"
+                (click)="addpromo()">
+                {{promotionFormMode == 0? 'Add':'Save'}}
+            </ion-button>
+        </div>
+    </div>
+    <div class="mainLinks" *ngIf="l_promoList.length != 0">
+        <ion-card class="cardMainLinks">
+            <ion-item *ngFor="let list of l_promoList; let i = index">
+                <div class="list-1">
+                        <div class="left-section">
+                                <div class="title">{{list.Title}}</div>
+                                <div class="description">{{list.Description}}</div>
+                            </div>
+                            <div class="right-section">
+                                    <div>{{list.Price}}</div>
+                                    <div><ion-icon ios="ios-create" md="md-create" class="icon" (click)="edit(i)"></ion-icon> <ion-icon ios="ios-trash" md="md-trash" class="icon" (click)="delete(i)"></ion-icon></div>
+                            </div>
+                            
+                </div>
+             
+            </ion-item>
+        </ion-card>
+    </div>
+    <div class="mainLinks" [hidden]="promotionFormMode == 0? true: false">
+        <ion-card class="cardMainLinks">
+            <ion-item>
+                <div class="main">
+                    <div class="text">
+                        <ion-label position="floating" style="color: #fb630f;">Title</ion-label>
+                        <ion-input class="inputField" type="text" name="l_title" [(ngModel)]="l_title"
+                            (keyup)="formValidation()" (ionChange)="formValidation()"
+                            (ngModelChange)="l_title=getFirstLetterCapital(l_title)" maxlength="50"
+                            (input)="l_titleLength=getLength($event.target.value,50)"></ion-input>
+                    </div>
+                    <div class="textLength">
+                        {{l_titleLength}}
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="main">
+                    <div class="text">
+                        <ion-label position="floating" style="color: #fb630f;">Price</ion-label>
+                        <ion-input type="tel" class="inputField" [(ngModel)]="l_price" (keyup)="formValidation()"
+                            (ionChange)="formValidation()"></ion-input>
+                    </div>
+                    <div class="textLength">
+                        {{l_mobileLength}}
+                    </div>
+                </div>
+            </ion-item>
+            <div class="comment">
+                <ion-label>
+                    <h3>Description <span>(Optional)</span>
+                        <div class="text-length">
+                            {{l_descriptionLength}} Characters
+                        </div>
+                    </h3>
+                </ion-label>
+                <ion-textarea type="text" rows="3" class="comment-text" [(ngModel)]="l_description" maxlength="1000"
+                    (input)="l_descriptionLength=getLength($event.target.value,1000)">
+                </ion-textarea>
+            </div>
+            <div class="remove">
+                <div class="btn">
+                    <ion-button class="bton remove-me" fill="clear" color="light" (click)="removepromo()">
+                        Cancel
+                    </ion-button>
+                </div>
+            </div>
+        </ion-card>
+    </div>
+</ion-content>
+<ion-footer>
+    <div class="footer">
+        <div class="btn">
+            <ion-button class="bton" fill="clear" color="light" (click)="gotoDiscount()">
+                Next
+            </ion-button>
+        </div>
+    </div>
+</ion-footer>

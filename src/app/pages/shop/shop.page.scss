@@ -1,0 +1,343 @@
+ion-content{
+    --background: #f5f5f5;  
+}
+.main-head{
+    width:100%;
+    float: left;
+    background-color: #f5f5f5;
+    .head-main{
+        width: 100%;
+        float: left;
+        //background: #f5f5f5;
+        background: #fb630f;
+        .main_menu{
+            width: 95%;
+            height:40px;
+            margin: 15px 0px 2px 12px;
+            color: white;
+            float: left;
+            .menu{
+                width: 10%;
+                height: 25px;
+                color: white;
+                padding: 0px 6px 6px 6px;
+                font-size: 22px;
+                float: left;
+            }
+            .text_logo{
+             width: auto;
+             height: 29px;
+             margin: 0px 0px 0px 0px;
+             padding: 0px;
+             float: left;
+             font-size: 17px;
+             font-weight: bolder;
+             text-align: center;
+             color: white;
+             font-family:'Poppins';
+             font-style: normal; 
+             font-variant: normal; 
+             .text-input{
+                height: 30px;
+             }
+            }
+            .notify{ 
+                width: 8%;
+                height: 10%;
+                float: right;
+                margin: 4px 9px 0px 0px;
+                color: white;
+                .notify-icon{
+                    font-size: 22px;
+                    float: right;
+                    position: relative;
+                }
+            }
+        }
+    }
+    .search-bar{
+        width: 100%;
+        height: 56px;
+        float: left;
+        margin:10px 0px 0px 0px;;
+        padding: 10px 0px 10px 0px;
+        background: #f5f5f5;
+        .bar{
+            width: 89%;
+            height: 40px;
+            float:center;
+            margin:0px auto;
+            padding: 5px 0px 0px 0px;
+            color: #969ba1;
+            border-radius: 50px; 
+            background-color: white;
+            box-shadow: 0 0 5px #d8d8d8 ;
+            .stext{
+                float: left;
+                height: 25px;
+                width: 86%;
+                padding: 4px 0px 0px 6px;
+                font-size: 15px;
+                text-align: left;
+                font-family:'Poppins';
+            }
+            .searchicon{
+                width: 12%;
+                height: 22px;
+                margin: 0px 0px 0px 12px;
+                float: left;
+                margin: 5px 0px 0px 5px;
+                font-size: 22px;
+            }
+        }
+    }
+}
+.main_shops{
+    width: 96%;
+    height: 228px;
+    float: left;
+    margin-top: 22px;
+}
+// Shops
+.card_main_pic{
+    height: 152px;
+    width: 100%;
+    margin: -6px 0px 0px 0px;
+    float: left;
+    position: absolute;
+    z-index: 100;
+    .card_main_pics{
+        width: 84%;          
+        margin: 0px auto;
+        .card_pics{
+            width: 84%;
+            float: center;
+            padding: 0px;
+            border-radius: 15px;
+            position: absolute; 
+            z-index: 90;
+            .pic{
+                height: 150px;
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                border-radius: 15px;
+                box-shadow: 0 0 5px #d8d8d8;
+            }        
+        }        
+    .card_dis{
+        width: 85%;
+        height: 17px;
+        float: left;
+        box-align: bottom;
+        margin: 8px 0px 0px 0px;
+        position: absolute;
+        z-index: 100; 
+        bottom: 0px;
+        .card_dis_text{
+            height: 21px;
+            background-color: #fb630f;
+            float: right;
+            color: #fff;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 15px;
+            margin: 7px 12px 0px 0px;
+            padding: 5px 12px 4px 12px;
+            position: sticky;
+        }
+    } 
+    }
+}
+ .card_main{
+    width: 98%;
+    height: 167px;
+    float: left;
+    margin: 55px 0px 0px 11px;
+    box-shadow: 0 0 5px #d8d8d8;
+    background-color: white;
+    border-radius: 10px;
+    .card_logo{
+        width: 16%;
+        height: 39px;
+        margin: 103px 0px 0px 23px;
+        float: left;
+        border-radius: 10px;
+    //background-size: cover;
+    //background-image: url('../../../assets/img/logo.png'); 
+    .img{
+        width: 100%;
+        height: 100%;
+    }
+    }
+    .card_text{
+        width: 69%;
+        height: 65px;
+        margin: 90px 0px 0px 0px;
+        float: left;
+    }
+    .card_name_distance{
+        width: 100%;
+        float: left;
+        .card_name{
+            height: 16px;
+            float: left;
+            margin: 12px 0px 0px 7px;
+            color: #2e3842;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: left;
+            font-family:'Poppins';
+            font-style: normal; 
+            font-variant: normal;  
+        }
+        .card_distance{
+            margin:17px 0px 0px 5px;
+            color: #969ba1;
+            text-align: right;
+            font-weight: bolder;
+            font-family:'Poppins';
+            font-style: normal; 
+            font-variant: normal;
+            font-size: 8px;
+            text-align:center;
+            float:right;
+            .card_distance_icon{
+                float: left;
+                margin: 0px 0px 0px 1px;
+                transform: rotate(45deg);
+            }
+            h6{
+                font-size: 9px;
+                font-weight: bolder;
+                margin:  0px 0px 0px 0px;
+                padding: 0px 5px 0px 0px;
+                float: right;
+            }
+        }
+    }
+    .card_adress{
+        width: 97%;
+        float: left;
+        margin: 6px 0px 0px 5px;
+        color: #969ba1;
+        font-size: 9px;
+        text-align: left;
+        font-weight: bold;
+        font-family:'Poppins';
+        font-style: normal; 
+        font-variant: normal;
+        .card_adress_icon{
+            float: left;
+            color:#fb630f;
+            margin: 1px 0px 0px 0px;
+        }
+        h6{
+            font-size: 10px;
+            margin:  0px 0px 0px 2px;
+            padding: 0px 5px 0px 0px;
+            text-align: right;
+            float: left;
+        }  
+    }
+    .card_mainRating{
+        width: 93%;
+        height: 10px;
+        float: left;
+        margin: 7px 0px 0px 5px;
+        .card_rating{
+            height: 10px;
+            float: left;
+            font-size:12px;     
+        }
+        label{
+            float: left;
+            font-size: 9px; 
+            color:#969ba1; 
+            margin:1px 0px 0px 6px;
+            font-family:'Poppins';
+            font-style: normal; 
+            font-variant: normal;
+            text-align: left;
+           }    
+    }
+}
+.review-rating{
+    width: 40%;
+    height: 30px;
+    margin: 0px 0px 0px 2px; 
+    float: right; 
+    font-size:small; 
+    .star_rating{
+        color:#969ba1; 
+        position: relative;
+        z-index: 0;
+        float: left;
+    }    
+  }
+  .star_rating_color{
+    color:#fece3a;
+    position: absolute;
+    float: left;
+    z-index: 100;
+}
+.card_Unfavrouite{
+    height: 17px;
+    width:15%;
+    margin: -3px 0px 0px 0px;
+    padding-left: 13px;
+    float: right;
+    font-size: 20px;
+    text-align:center;
+    }
+    .card_favrouite{
+        height: 17px;
+        width:15%;
+        margin: -3px 0px 0px 0px;
+        float:right;
+        padding-left: 13px;
+        font-size: 20px;
+        text-align: center;
+        color: rgba(167, 19, 19, 0.87);
+        }
+    .card_Unfavrouite h5{
+        font-family:'Poppins';
+        font-style: normal; 
+        font-variant: normal;
+        font-size: 9px;
+        margin: -5px 0px 0px 0px;
+        padding: 0px;
+        text-align: center;
+        color: #969ba1;
+    }
+    .card_favrouite h5{
+        font-family:'Poppins';
+        font-style: normal; 
+        font-variant: normal;
+        font-size: 9px;
+        margin: -5px 0px 0px 0px;
+        padding: 0px;
+        color: #969ba1;
+        text-align: center;
+    }
+ .design{
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px #d8d8d8;
+            h6{
+                color: #2e3842;
+                font-size: 20px;
+                .icon{
+                  color: #fb630f;
+                  font-size: 17px;
+                }
+            }
+               span{
+                        color: #969ba1;
+                        font-size: 15px;
+                    }
+                
+                }
+        

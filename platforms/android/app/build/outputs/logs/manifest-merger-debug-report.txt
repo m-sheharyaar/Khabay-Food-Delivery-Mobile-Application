@@ -1,0 +1,535 @@
+-- Merging decision tree log ---
+provider#org.apache.cordova.camera.FileProvider
+INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:12:9-14:20
+	android:grantUriPermissions
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:12:92-126
+	android:authorities
+		INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:12:19-66
+	android:exported
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:12:67-91
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:12:127-180
+provider#de.appplant.cordova.plugin.notification.util.AssetProvider
+INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:31:9-33:20
+	android:grantUriPermissions
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:31:92-126
+	android:authorities
+		INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:31:19-66
+	android:exported
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:31:67-91
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:31:127-200
+provider#nl.xservices.plugins.FileProvider
+INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:42:9-44:20
+	android:grantUriPermissions
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:42:100-134
+	android:authorities
+		INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:42:19-74
+	android:exported
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:42:75-99
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:42:135-183
+manifest
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:2:1-54:12
+MERGED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:2:1-52:12
+MERGED from [com.google.firebase:firebase-core:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-core-10.2.6.aar\3731e1589bd3d6b03c7d8a9776d00bf3\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.6.aar\9dce64b8ab5836484dad777ae1741853\AndroidManifest.xml:16:1-30:12
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:16:1-34:12
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:16:1-29:12
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:16:1-50:12
+MERGED from [com.google.firebase:firebase-common:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.6.aar\a5e308a941aa7c3fe50cf2f5a49dbb12\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-tasks:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.6.aar\5b238074588b2d2174d6ed209b1cd208\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.6.aar\d1e8bcd85170c84c75eae6906ff00a4f\AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5dde202bff459b64050aef2bc047fbb5\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\8bcfa5dba8b22a904e3fa56f48e9096f\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\0e7856eaef0b53319f9d1d33fb12d75c\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\4669f83e219539229fcc37f04f540895\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\da2c4c26ed85ebdca8432b7081ab020d\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\aa2f923260d951d0fd05b37d8bb53947\AndroidManifest.xml:17:1-31:12
+MERGED from [:CordovaLib] E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:1-27:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e41c63b59cf5a9e084504ddd72815c5d\AndroidManifest.xml:17:1-30:12
+INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:2:1-54:12
+	package
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:2:98-126
+		INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:2:70-97
+		INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml
+	android:hardwareAccelerated
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:2:11-45
+	xmlns:android
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:2:127-185
+	android:versionCode
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:2:46-69
+		INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml
+supports-screens
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:3:5-191
+	android:largeScreens
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:3:49-76
+	android:smallScreens
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:3:132-159
+	android:normalScreens
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:3:77-105
+	android:xlargeScreens
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:3:160-188
+	android:resizeable
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:3:106-131
+	android:anyDensity
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:3:23-48
+uses-permission#android.permission.INTERNET
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:4:5-67
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:4:22-64
+application
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:5:5-46:19
+MERGED from [com.google.firebase:firebase-core:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-core-10.2.6.aar\3731e1589bd3d6b03c7d8a9776d00bf3\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-core-10.2.6.aar\3731e1589bd3d6b03c7d8a9776d00bf3\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.6.aar\9dce64b8ab5836484dad777ae1741853\AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.6.aar\9dce64b8ab5836484dad777ae1741853\AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:28:5-49:19
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:28:5-49:19
+MERGED from [com.google.firebase:firebase-common:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.6.aar\a5e308a941aa7c3fe50cf2f5a49dbb12\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.firebase:firebase-common:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.6.aar\a5e308a941aa7c3fe50cf2f5a49dbb12\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.6.aar\5b238074588b2d2174d6ed209b1cd208\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.6.aar\5b238074588b2d2174d6ed209b1cd208\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.6.aar\d1e8bcd85170c84c75eae6906ff00a4f\AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.6.aar\d1e8bcd85170c84c75eae6906ff00a4f\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5dde202bff459b64050aef2bc047fbb5\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5dde202bff459b64050aef2bc047fbb5\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\8bcfa5dba8b22a904e3fa56f48e9096f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\8bcfa5dba8b22a904e3fa56f48e9096f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\0e7856eaef0b53319f9d1d33fb12d75c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\0e7856eaef0b53319f9d1d33fb12d75c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\4669f83e219539229fcc37f04f540895\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\4669f83e219539229fcc37f04f540895\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\da2c4c26ed85ebdca8432b7081ab020d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\da2c4c26ed85ebdca8432b7081ab020d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\aa2f923260d951d0fd05b37d8bb53947\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\aa2f923260d951d0fd05b37d8bb53947\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e41c63b59cf5a9e084504ddd72815c5d\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e41c63b59cf5a9e084504ddd72815c5d\AndroidManifest.xml:24:5-28:19
+	android:supportsRtl
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:5:175-201
+	android:label
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:5:81-113
+	android:hardwareAccelerated
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:5:18-52
+	android:icon
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:5:53-80
+	android:networkSecurityConfig
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:5:114-174
+activity#io.ionic.khabayapp.MainActivity
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:6:9-11:20
+	android:label
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:6:97-134
+	android:launchMode
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:6:135-165
+	android:windowSoftInputMode
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:6:257-299
+	android:configChanges
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:6:19-96
+	android:theme
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:6:194-256
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:6:166-193
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:7:13-10:29
+	android:label
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:7:28-65
+action#android.intent.action.MAIN
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:8:17-69
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:8:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:9:17-77
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:9:27-74
+activity#com.gae.scaffolder.plugin.FCMPluginActivity
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:15:9-20:20
+	android:launchMode
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:15:43-73
+	android:exported
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:15:19-42
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:15:74-132
+intent-filter#FCM_PLUGIN_ACTIVITY+android.intent.category.DEFAULT
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:16:13-19:29
+action#FCM_PLUGIN_ACTIVITY
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:17:17-62
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:17:25-59
+category#android.intent.category.DEFAULT
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:18:17-76
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:18:27-73
+service#com.gae.scaffolder.plugin.MyFirebaseMessagingService
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:21:9-25:19
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:21:18-85
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:22:13-24:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:23:17-78
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:23:25-75
+service#com.gae.scaffolder.plugin.MyFirebaseInstanceIDService
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:26:9-30:19
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:26:18-86
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:27:13-29:29
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:28:17-80
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:28:25-77
+receiver#de.appplant.cordova.plugin.localnotification.TriggerReceiver
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:34:9-122
+	android:exported
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:34:19-43
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:34:44-119
+receiver#de.appplant.cordova.plugin.localnotification.ClearReceiver
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:35:9-120
+	android:exported
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:35:19-43
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:35:44-117
+activity#de.appplant.cordova.plugin.localnotification.ClickReceiver
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:36:9-205
+	android:launchMode
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:36:44-79
+	android:exported
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:36:19-43
+	android:theme
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:36:154-202
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:36:80-153
+receiver#nl.xservices.plugins.ShareChooserPendingIntent
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:37:9-41:20
+	android:enabled
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:37:19-41
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:37:42-103
+intent-filter#android.intent.action.SEND
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:38:13-40:29
+action#android.intent.action.SEND
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:39:17-69
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:39:25-66
+meta-data#launchnavigator.GOOGLE_API_KEY
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:45:9-99
+	android:value
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:45:66-96
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:45:20-65
+uses-sdk
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:47:5-74
+INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:47:5-74
+MERGED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:7:5-9:41
+MERGED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-core:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-core-10.2.6.aar\3731e1589bd3d6b03c7d8a9776d00bf3\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-core:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-core-10.2.6.aar\3731e1589bd3d6b03c7d8a9776d00bf3\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.6.aar\9dce64b8ab5836484dad777ae1741853\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.6.aar\9dce64b8ab5836484dad777ae1741853\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-common:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.6.aar\a5e308a941aa7c3fe50cf2f5a49dbb12\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-common:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.6.aar\a5e308a941aa7c3fe50cf2f5a49dbb12\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.6.aar\5b238074588b2d2174d6ed209b1cd208\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-tasks-10.2.6.aar\5b238074588b2d2174d6ed209b1cd208\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.6.aar\d1e8bcd85170c84c75eae6906ff00a4f\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.6.aar\d1e8bcd85170c84c75eae6906ff00a4f\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5dde202bff459b64050aef2bc047fbb5\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5dde202bff459b64050aef2bc047fbb5\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\8bcfa5dba8b22a904e3fa56f48e9096f\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\8bcfa5dba8b22a904e3fa56f48e9096f\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\0e7856eaef0b53319f9d1d33fb12d75c\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\0e7856eaef0b53319f9d1d33fb12d75c\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\4669f83e219539229fcc37f04f540895\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\4669f83e219539229fcc37f04f540895\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\da2c4c26ed85ebdca8432b7081ab020d\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\da2c4c26ed85ebdca8432b7081ab020d\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\aa2f923260d951d0fd05b37d8bb53947\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\aa2f923260d951d0fd05b37d8bb53947\AndroidManifest.xml:21:5-23:58
+MERGED from [:CordovaLib] E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
+MERGED from [:CordovaLib] E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e41c63b59cf5a9e084504ddd72815c5d\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e41c63b59cf5a9e084504ddd72815c5d\AndroidManifest.xml:20:5-22:41
+INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:47:5-74
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5dde202bff459b64050aef2bc047fbb5\AndroidManifest.xml:23:9-51
+	android:targetSdkVersion
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:47:42-71
+	android:minSdkVersion
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:47:15-41
+		INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:48:5-81
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:48:22-78
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:49:5-81
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:49:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:50:5-79
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:50:22-76
+uses-feature#android.hardware.location.gps
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:51:5-66
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:51:19-63
+uses-permission#android.permission.WAKE_LOCK
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:52:5-68
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:52:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:53:5-79
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:53:22-76
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:13:13-123
+	android:resource
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:13:75-120
+	android:name
+		ADDED from E:\MyWork\Projects\DiscountMobileApp\SourceCode\Khabay\platforms\android\app\src\main\AndroidManifest.xml:13:24-74
+uses-permission#com.sec.android.provider.badge.permission.READ
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:19:5-86
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:19:22-83
+uses-permission#com.sec.android.provider.badge.permission.WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:20:5-87
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:20:22-84
+uses-permission#com.htc.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:23:22-78
+uses-permission#com.htc.launcher.permission.UPDATE_SHORTCUT
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:24:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:24:22-80
+uses-permission#com.sonyericsson.home.permission.BROADCAST_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:27:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:27:22-85
+uses-permission#com.sonymobile.home.permission.PROVIDER_INSERT_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:28:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:28:22-89
+uses-permission#com.anddoes.launcher.permission.UPDATE_COUNT
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:31:5-84
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:31:22-81
+uses-permission#com.majeur.launcher.permission.UPDATE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:34:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:34:22-80
+uses-permission#com.huawei.android.launcher.permission.CHANGE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:37:5-91
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:37:22-88
+uses-permission#com.huawei.android.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:38:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:38:22-89
+uses-permission#com.huawei.android.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:39:5-93
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:39:22-90
+uses-permission#android.permission.READ_APP_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:42:5-73
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:42:22-70
+uses-permission#com.oppo.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:45:5-82
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:45:22-79
+uses-permission#com.oppo.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:46:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:46:22-80
+uses-permission#me.everything.badger.permission.BADGE_COUNT_READ
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:49:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:49:22-85
+uses-permission#me.everything.badger.permission.BADGE_COUNT_WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:50:5-89
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.22] C:\Users\user\.gradle\caches\transforms-1\files-1.1\ShortcutBadger-1.1.22.aar\2e248ef956a1e92a35cecf8e49f6a369\AndroidManifest.xml:50:22-86
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.6.aar\9dce64b8ab5836484dad777ae1741853\AndroidManifest.xml:23:9-27:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.6.aar\9dce64b8ab5836484dad777ae1741853\AndroidManifest.xml:23:88-111
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-messaging-10.2.6.aar\9dce64b8ab5836484dad777ae1741853\AndroidManifest.xml:23:18-87
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:27:162-184
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:27:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-10.2.6.aar\0ee883bae5cbd46008a6183aebb73c48\AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-10.2.6.aar\d201ea5c68b0a68583eb50bf526ba8d5\AndroidManifest.xml:32:16-87
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:22:22-79
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:24:17-71
+permission#io.ionic.khabayapp.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:24:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:26:22-76
+uses-permission#io.ionic.khabayapp.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:26:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:30:9-35:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:30:19-84
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:31:13-34:29
+intent-filter#com.google.android.c2dm.intent.RECEIVE+io.ionic.khabayapp
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:31:13-34:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:32:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:32:25-78
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:33:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:33:27-58
+category#io.ionic.khabayapp
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:33:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:33:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:39:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:39:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:39:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:43:9-47:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:43:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-10.2.6.aar\488eae061c9b11dd939f05bd5d22439b\AndroidManifest.xml:43:18-82
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.6.aar\a5e308a941aa7c3fe50cf2f5a49dbb12\AndroidManifest.xml:6:9-194
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.6.aar\a5e308a941aa7c3fe50cf2f5a49dbb12\AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.6.aar\a5e308a941aa7c3fe50cf2f5a49dbb12\AndroidManifest.xml:6:144-168
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.6.aar\a5e308a941aa7c3fe50cf2f5a49dbb12\AndroidManifest.xml:6:169-192
+	android:name
+		ADDED from [com.google.firebase:firebase-common:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-common-10.2.6.aar\a5e308a941aa7c3fe50cf2f5a49dbb12\AndroidManifest.xml:6:79-143
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.6.aar\d1e8bcd85170c84c75eae6906ff00a4f\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.6.aar\d1e8bcd85170c84c75eae6906ff00a4f\AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-basement-10.2.6.aar\d1e8bcd85170c84c75eae6906ff00a4f\AndroidManifest.xml:20:20-65
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v4:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5dde202bff459b64050aef2bc047fbb5\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\8bcfa5dba8b22a904e3fa56f48e9096f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\8bcfa5dba8b22a904e3fa56f48e9096f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\0e7856eaef0b53319f9d1d33fb12d75c\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\0e7856eaef0b53319f9d1d33fb12d75c\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\4669f83e219539229fcc37f04f540895\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\4669f83e219539229fcc37f04f540895\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\da2c4c26ed85ebdca8432b7081ab020d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\da2c4c26ed85ebdca8432b7081ab020d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\aa2f923260d951d0fd05b37d8bb53947\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\aa2f923260d951d0fd05b37d8bb53947\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5dde202bff459b64050aef2bc047fbb5\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5dde202bff459b64050aef2bc047fbb5\AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e41c63b59cf5a9e084504ddd72815c5d\AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e41c63b59cf5a9e084504ddd72815c5d\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\e41c63b59cf5a9e084504ddd72815c5d\AndroidManifest.xml:26:13-58

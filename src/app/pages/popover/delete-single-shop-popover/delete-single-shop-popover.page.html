@@ -1,0 +1,22 @@
+<ion-content padding>
+  <div class="main" (click)="deleteSingleShop()">
+    <ion-icon name="ios-trash" class="delete-icon"></ion-icon>
+    <ion-label class="delete-text">
+      &nbsp;&nbsp;Delete
+    </ion-label>
+  </div>
+  <br />
+  <div class="main" (click)="hideSingleShop(l_visibel)">
+    <ion-icon name="eye" class="delete-icon"></ion-icon>
+    <ion-label class="delete-text">
+      &nbsp;&nbsp;{{l_show}}
+    </ion-label>
+  </div>
+  <br />
+  <div class="main" (click)="updateShop(l_shopID)">
+    <ion-icon ios="ios-create" md="md-create" class="delete-icon"></ion-icon>
+    <ion-label class="delete-text">
+      &nbsp;&nbsp;Edit
+    </ion-label>
+  </div>
+</ion-content>

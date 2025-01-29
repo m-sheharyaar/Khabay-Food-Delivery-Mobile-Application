@@ -1,0 +1,245 @@
+ion-content{
+    --background: #f5f5f5;  
+}
+.head-main{
+    width: 100%;
+    float: left;
+    background: #fb630f;
+    .main_menu{
+        width: 96%;
+        height:30px;
+        margin: 15px 0px 6px 12px;
+        color: white;
+        float: left;
+        .menu{
+            width: 10%;
+            height: 25px;
+            color: white;
+            padding: 0px 6px 6px 6px;
+            font-size: 22px;
+            float: left;
+        }
+        .text_logo{
+         width: 83%;
+         height: 25px;
+         margin: 0px 0px 0px 0px;
+         padding: 0px;
+         float: left;
+         font-size: 17px;
+         font-weight: bolder;
+         text-align: center;
+         color: white;
+         font-family:'Poppins';
+         font-style: normal; 
+         font-variant: normal; 
+        }
+    }
+}
+// Shops
+.main_shops{
+    width: 96%;
+    height: 140px;
+    float: left;
+    margin-left: 2%;
+}
+.main_card_pics_shops{
+    height: 121px;
+    width: 32%;
+    margin: 0px 0px 0px 0px;
+    float: left;
+    position: absolute;
+    z-index: 100;
+    .card_pics_shops{
+        height: 95px;
+        width: 100%;
+        margin: 18px 0px 0px 5px;
+        float: left;
+        padding: 0px; 
+        .pic_shops{
+            height:95px;
+            width:100%;
+            margin: 0px;
+            padding: 0px;
+            border-radius: 10px; 
+            position: absolute; 
+            z-index: 90;
+            box-shadow: 0 0 5px #d8d8d8; 
+        }
+    }
+}
+.card_main_shops{
+    height: 121px;
+    width: 82%;
+    float: left;
+    margin: 5px 5px 7px 17%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #d8d8d8;
+    background-color: white;
+    .card_text_shops{
+        width: 72%;
+        height: 110px;
+        float: left;
+        margin: 0px 0px 0px 26%;
+    }
+    .card_name_distance_Shop{
+        width: 100%;
+        float: left;
+        .card_name_Shop{
+            height: 12px;
+            float: left;
+            margin: 15px 0px 0px 6px;
+            color: #2e3842;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: left;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-variant: normal;
+        }
+        .card_distance_Shop{
+            margin: 21px 3px 0px 0px;;
+            color: #969ba1;
+            text-align: right;
+            font-weight: bolder;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-variant: normal;
+            font-size: 8px;
+            text-align: center;
+            float: right;
+            .card_distance_icon_Shop{
+                float: left;
+                margin: 0px 0px 0px 1px;
+                transform: rotate(45deg);
+            }
+            h6{
+                font-weight: bolder;
+                font-size: 8px;
+                margin:  0px 0px 0px 0px;
+                padding: 0px 5px 0px 0px;
+                float: right;
+            }
+        }
+    }
+    .card_adress_shops{
+        width: 100%;
+        height: 19px;
+        float: left;
+        margin: 8px 0px 0px 3px;
+        text-align: left;
+        font-family:'Poppins';
+        font-style: normal; 
+        font-variant: normal; 
+        .card_adress_shops_icon{
+            color: #fb630f;
+            width: 10px;
+            float: left;
+            font-size: 7px;
+            margin: 2px 0px 0px 0px;
+        }
+        h6{
+            font-size: 9px;
+            color: #969ba1;
+            margin:  0px 0px 0px 0px;
+            padding: 0px 7px 0px 0px;
+        } 
+    }
+    .card_mainRating_newShop{
+        width: 94%;
+        height: 10px;
+        float: left;
+        margin: 4px 0px 0px 5px;
+        .card_rating_newShop{
+            height: 10px;
+            float: left;
+            font-size:10px;     
+        }
+        label{
+            float: left;
+            font-size: 7px; 
+            color:#969ba1; 
+            margin:0px 0px 0px 6px;
+            font-family:'Poppins';
+            font-style: normal; 
+            font-variant: normal;
+            text-align: left;
+           }    
+           .card_expire_offer_shops{
+            width: 60%;
+            height: 23px;
+            float: right;
+            margin: -8px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            font-size: 8px;
+            color: #2e3842;
+            text-align: right;
+            font-family:'Poppins';
+            font-style: normal; 
+            font-variant: normal;
+            font-weight: bold;
+            .card_expire_offer_time_shops{
+                width: 100%;
+                height: 10px;
+                float: right;
+                font-family:'Poppins';
+                font-style: normal; 
+                font-variant: normal;
+                margin: 0px 0px 0px 0px;
+                padding: 0px 0px 0px 0px;
+                font-size: 7px;
+                font-size-adjust: inherit;
+                font-weight: 900;
+                color: #fb630f;
+                text-align: right; 
+            } 
+        }
+    }
+    .card_offer_shops{
+        width: 100%;
+        height: 16px;
+        float: left;
+        margin: 12px 0px 0px 5px;
+        .card_discount_shops{
+            height: 21px;
+            background-color: #fb630f;
+            float: left;
+            color: #fff;
+            font-size: 9px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 15px;
+            margin: 0px 10px 0px 0px;
+            padding: 6px 12px 6px 12px;
+            position: sticky;
+        }
+        .card_logo_Shops{
+            width: 25%;
+            margin: 0px 9px 0px 0px;
+            height: 25px;
+            float: right;
+            .img{
+                width: 100%;
+                height: 100%;
+            }     
+        }
+    }
+}
+.review-rating{
+    width: 40%;
+    height: 30px;
+    margin: 0px 0px 0px 2px; 
+    float: right; 
+    font-size:small; 
+    .star_rating{
+        color:#969ba1; 
+        position: relative;
+        z-index: 0;
+        float: left;
+    }    
+  }
+  .star_rating_color{
+    color:#fece3a;
+    position: absolute;
+    float: left;
+    z-index: 100;
+}

@@ -1,0 +1,189 @@
+ion-content{
+    --background: #f5f5f5;  
+}
+.head-main{
+    width: 100%;
+    float: left;
+    background: #fb630f;
+    .main_menu{
+        width: 84%;
+        height:40px;
+        margin: 15px 0px 2px 12px;
+        color: white;
+        float: left;
+        .menu{
+            width: 10%;
+            height: 25px;
+            color: white;
+            padding: 0px 6px 6px 6px;
+            font-size: 22px;
+            float: left;
+        }
+        .text_logo{
+            width: 51%;
+            height: 25px;
+            margin: -6px 0px 0px 70px;
+         padding: 0px;
+         float: left;
+         font-size: 17px;
+         font-weight: bolder;
+         text-align: center;
+         color: white;
+         font-family:'Poppins';
+         font-style: normal; 
+         font-variant: normal; 
+        }
+    }
+    .notify{ 
+        width: 8%;
+        height: 10%;
+        float: right;
+        margin: 15px 9px 0px 0px;
+        color:white;
+        .notify-icon{
+            font-size: 22px;
+            float: right;
+            position: relative;
+        }
+    }
+}
+.item-native{
+    --padding-start: 0px !important;
+}
+.mainLinks{
+    width: 100%;
+    height: auto;
+    margin: 17px 0px 0px 0px;
+    .cardMainLinks{
+        width: 90%;
+        height: auto;
+        margin: 0px auto;
+        background-color: white;
+        border-radius: 15px;
+        padding: 0px 15px 22px 15px;
+        box-shadow: 0 0 5px #d8d8d8 ;
+    }
+    .name{
+        width: 100%;
+        height: auto;
+        float: left;
+        background-color:#fff;
+        margin: 2px 0px 0px 0px;
+        padding: 0px;
+        .name-text{ 
+            margin:15px 0px 0px 1px; 
+            width:94%; 
+           font-size: 13px;
+            float: left;
+            color: #2e3842;
+            font-family: 'Poppins'; 
+            font-style: normal; 
+            font-variant: normal; 
+        }
+        .name-edit{
+            width: auto;
+            height:25px;
+            float: right;  
+            padding-top: 15px;
+            color: #fb630f;
+            .arrowicon{
+                float:right;
+                font-size: 18px;
+                color: #fb630f;
+               -ms-transform: rotate(-50deg); /* IE 9 */
+               -webkit-transform: rotate(-50deg); /* Safari 3-8 */
+               transform: rotate(-50deg);
+            }
+        }
+    
+    }  
+}
+.title{
+    float:center;
+    width: 60%;
+    padding:10px;
+    float: left;
+}
+.searchHistory{
+    width: 100%;
+    height: auto;
+    float:left;
+    .main{
+        width:100%;
+        float:left;
+        h5{
+            float: left;
+            width:80%;
+            color: #969ba1;
+            font-size:12px;
+            margin:0px 0px 10px 0px;
+        }
+
+        h6{
+            float: right;
+            width: 20%;
+            color: #fb630f;
+            font-size:10px;
+            text-align: right;
+            margin:0px 0px 10px 0px;
+        }
+
+        .unable{
+            h5{
+                float: left;
+                width:80%;
+                color: lightgrey;
+                font-size:12px;
+                margin:0px 0px 10px 0px;
+            }
+
+            h6{
+                float: right;
+                width: 20%;
+                color: lightgrey;
+                font-size:10px;
+                text-align: right;
+                margin:0px 0px 10px 0px;
+            }
+        
+        }
+
+    }  
+    .searchList{
+        float: left;
+        height: 20px;
+        background-color: gainsboro;
+        margin:0px 10px 10px 0px; 
+        span{
+            color:#2e3842;
+            font-size: 11px;
+            text-align: center;
+            padding:5px;
+        }
+    }
+}
+.image{
+    float: left;
+    width: 70px;
+    height: 46px;
+    margin:0px 10px 10px 0px; 
+}
+.design{
+    text-align: center;
+    padding: 10px;
+   // border-radius: 10px;
+   // box-shadow: 0 0 5px #d8d8d8;
+    h6{
+        color: #2e3842;
+        font-size: 20px;
+        .icon{
+          color: #fb630f;
+          font-size: 17px;
+        }
+    }
+       span{
+                color: #969ba1;
+                font-size: 15px;
+            }
+        
+        }

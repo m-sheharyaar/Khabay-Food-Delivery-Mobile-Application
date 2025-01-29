@@ -1,0 +1,85 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start" (click)="back()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </div>
+        <div class="text_logo">
+            Shop Basic Information
+        </div>
+    </div>
+</div>
+<ion-content>
+    <div class="mainLinks">
+        <ion-card class="cardMainLinks">
+            <ion-item>
+                <div class="main">
+                    <div class="text">
+                        <ion-label position="floating" style="color: #fb630f;">Discount</ion-label>
+                        <ion-input type="number" class="inputField" name="l_discount" [(ngModel)]="l_discount"
+                            (keyup.enter)="insertShop()">
+                        </ion-input>
+                    </div>
+                    <div class="textLength">
+                        %
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" style="color: #fb630f;">Start Date</ion-label>
+                <ion-datetime display-format="YYYY-MMM-DD" class="inputField" name="l_startDate" min="{{l_minDate}}"
+                    [(ngModel)]="l_startDate" (keyup)="formValidation()" (ionChange)="formValidation()"
+                    (keyup.enter)="insertShop()"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-checkbox (ionChange)="hideExpiryDate()" style="color: #fb630f;" (keyup.enter)="insertShop()">
+                </ion-checkbox><span>WithOut Expiry
+                    Date</span>
+            </ion-item>
+            <ion-item [hidden]="l_hideExpiryDate">
+                <ion-label position="floating" style="color: #fb630f;">Expiry Date</ion-label>
+                <ion-datetime display-format="YYYY-MMM-DD" class="inputField" name="l_endDate" min="{{l_minDate}}"
+                    [(ngModel)]="l_endDate" (keyup)="formValidation()" (ionChange)="formValidation()"
+                    (keyup.enter)="insertShop()"></ion-datetime>
+            </ion-item>
+            &nbsp;
+            &nbsp;
+            <!-- pic upload
+            <ion-list>
+                <ion-item>
+                    <ion-thumbnail slot="start">
+                        <ion-img [src]="ImageURL"></ion-img>
+                    </ion-thumbnail>
+                    <ion-button slot="end" fill="clear" (click)="selectPhoto()" style="color: #fb630f;">
+                        <ion-icon slot="icon-only" name="cloud-upload"></ion-icon>
+                    </ion-button>
+                    <ion-button slot="end" fill="clear" (click)="removeShopImage()" style="color: #fb630f;">
+                        <ion-icon slot="icon-only" name="trash"></ion-icon>
+                    </ion-button>
+                </ion-item>
+            </ion-list>
+             logo upload
+            <ion-list>
+                <ion-item>
+                    <ion-thumbnail slot="start">
+                        <ion-img [src]="LogoURL"></ion-img>
+                    </ion-thumbnail>
+                    <ion-button slot="end" fill="clear" (click)="selectLogo()" style="color: #fb630f;">
+                        <ion-icon slot="icon-only" name="cloud-upload"></ion-icon>
+                    </ion-button>
+                    <ion-button slot="end" fill="clear" (click)="removelogoImage()" style="color: #fb630f;">
+                        <ion-icon slot="icon-only" name="trash"></ion-icon>
+                    </ion-button>
+                </ion-item>
+            </ion-list> -->
+            <div class="footer">
+                <div class="btn">
+                    <ion-button class="bton" fill="clear" color="light"
+                        [ngClass]="isbtnDisabled ? 'btn-disabled': 'btn-enable'"
+                        [attr.disabled]="isbtnDisabled? true:null" (click)="insertShop()">
+                        Register Shop
+                    </ion-button>
+                </div>
+            </div>
+        </ion-card>
+    </div>
+</ion-content>

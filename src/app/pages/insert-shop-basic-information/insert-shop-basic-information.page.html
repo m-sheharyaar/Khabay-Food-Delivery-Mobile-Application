@@ -1,0 +1,133 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start" (click)="back()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </div>
+        <div class="text_logo">
+            Shop Basic Information
+        </div>
+    </div>
+</div>
+<ion-content>
+    <div class="mainLinks">
+        <ion-card class="cardMainLinks">
+            <ion-item>
+                <div class="main">
+                    <div class="text">
+                        <ion-label position="floating" style="color: #fb630f;">Shop Name</ion-label>
+
+                        <ion-input type="text" class="inputField" #myInput id="shopName" name="l_shopName"
+                            [(ngModel)]="l_shopName" (keyup)="formValidation()"
+                            (ngModelChange)="l_shopName=getFirstLetterCapital(l_shopName)"
+                            (ionChange)="formValidation()" maxlength="50"
+                            (input)="l_shopNameLength=getLength($event.target.value,50)"></ion-input>
+                    </div>
+                    <div class="textLength">
+                        {{l_shopNameLength}}
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="main">
+                    <div class="text">
+                        <ion-label position="floating" style="color: #fb630f;">Address</ion-label>
+                        <ion-input class="inputField" type="text" name="l_address" [(ngModel)]="l_address"
+                            (keyup)="formValidation()" (ionChange)="formValidation()"
+                            (ngModelChange)="l_address=getFirstLetterCapital(l_address)" maxlength="500"
+                            (input)="l_addressLength=getLength($event.target.value,500)"></ion-input>
+                    </div>
+                    <div class="textLength">
+                        {{l_addressLength}}
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <ion-label style="color: #fb630f;">State</ion-label>
+                <ion-select placeholder="Select One" style="color:#fb630f;font-size: 13px;" [(ngModel)]="l_state"
+                    (ionChange)="getAllCity()">
+                    <ion-select-option *ngFor="let list of l_allStates">{{list.State}}</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label style="color: #fb630f;">City</ion-label>
+                <ion-select placeholder="Select One" style="color:#fb630f;font-size: 13px;" [(ngModel)]="l_city">
+                    <ion-select-option *ngFor="let list of l_allCity">{{list.City}}</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <div class="main">
+                    <div class="text">
+                        <ion-label position="floating" style="color: #fb630f;">Mobile</ion-label>
+                        <ion-input type="tel" class="inputField" maxlength="11" [(ngModel)]="l_mobile"
+                            (keyup)="formValidation()" (ionChange)="formValidation()"
+                            (input)="l_mobileLength=getLength($event.target.value,11)"></ion-input>
+                    </div>
+                    <div class="textLength">
+                        {{l_mobileLength}}
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="main">
+                    <div class="textPhone">
+                        <ion-label position="floating" style="color: #fb630f;">Phone</ion-label>
+                        <ion-input type="tel" class="inputField" name="l_phone" [(ngModel)]="l_phone" maxlength="11"
+                            (input)="l_phoneLength=getLength($event.target.value,11)"></ion-input>
+                    </div>
+                    <div class="textLengthPhone">
+                        (Optional)
+                        {{l_phoneLength}}
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" style="color: #fb630f;">Opening Time</ion-label>
+                <ion-datetime class="inputField" display-format="hh:mm A" name="l_openingTime"
+                    [(ngModel)]="l_openingTime" (keyup)="formValidation()" (ionChange)="formValidation()">
+                </ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" style="color: #fb630f;">Closing Time</ion-label>
+                <ion-datetime class="inputField" display-format="hh:mm A" name="l_closingTime"
+                    [(ngModel)]="l_closingTime" (keyup)="formValidation()" (ionChange)="formValidation()">
+                </ion-datetime>
+            </ion-item>
+            <ion-item>
+                <div class="main">
+                    <div class="text">
+                        <ion-label position="floating" style="color: #fb630f;">Badge Title</ion-label>
+                        <ion-input type="text" class="inputField" #myInput id="badgetitle" name="l_badgetitle"
+                            [(ngModel)]="l_badgetitle" (keyup)="formValidation()"
+                            (ngModelChange)="l_badgetitle=getFirstLetterCapital(l_badgetitle)"
+                            (ionChange)="formValidation()" maxlength="50"
+                            (input)="l_badgetitleLength=getLength($event.target.value,30)"></ion-input>
+                    </div>
+                    <div class="textLength">
+                        {{l_badgetitleLength}}
+                    </div>
+                </div>
+            </ion-item>
+            <div class="comment">
+                <ion-label>
+                    <h3>Description <span>(Optional)</span>
+                        <div class="text-length">
+                            {{l_descriptionLength}} Characters
+                        </div>
+                    </h3>
+                </ion-label>
+                <ion-textarea rows="3" class="comment-text" [(ngModel)]="l_description" maxlength="1000"
+                    (input)="l_descriptionLength=getLength($event.target.value,1000)">
+                </ion-textarea>
+            </div>
+            <div class="footer">
+                <div class="btn">
+                    <ion-button class="bton" fill="clear" color="light"
+                        [ngClass]="isbtnDisabled ? 'btn-disabled': 'btn-enable'"
+                        [attr.disabled]="isbtnDisabled? true:null" (click)="shopBasicInformation()">
+                        Next
+                    </ion-button>
+                </div>
+            </div>
+        </ion-card>
+    </div>
+</ion-content>

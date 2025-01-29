@@ -1,0 +1,75 @@
+<ion-content class="cont">
+    <ion-slides class="slide" pager="true" #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" (ionSlideReachEnd)="slidesDidStop(mySlider)" (ionSlideTouchEnd)="slidesDidLoad(mySlider)" [options]="slideOpts">
+        <ion-slide>
+            <div class="maincard">
+                <div class="body">
+                    <div class="card_pic">
+                        <img src="../../assets/img/slider Images/introSlider1.jpg"  />
+                    </div>
+                    <div class="card_price" (click)="next()">
+                        <span class="disount"> Skip </span>
+                    </div>
+                </div>
+                <div class="sub-body">
+                </div>
+                <div class="foot-body">
+                    <div class="maintext">Discover place near you</div>
+                    <div class="smalltext">
+                        <h6>Lorem ipsum is simply dummy text of the printing and tyesetting industry. Lorem Ipsum has
+                            been the industry's.</h6>
+                    </div>
+                </div>
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <div class="maincard">
+                <div class="body">
+                    <div class="card_pic">
+                        <img src="../../assets/img/slider Images/introSlider2.jpg"  />
+                    </div>
+                    <div class="card_price" (click)="next()">
+                        <span class="disount"> Skip </span>
+                    </div>
+                </div>
+                <div class="sub-body">
+                </div>
+                <div class="foot-body">
+                    <div class="maintext">Search for place easily</div>
+                    <div class="smalltext">
+                        <h6>Lorem ipsum is simply dummy text of the printing and tyesetting industry. Lorem Ipsum has
+                            been the industry's. Lorem Ipsum has been the industry's standard dummy text ever since the
+                            1500s.</h6>
+                    </div>
+                </div>
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <div class="maincard">
+                <div class="body">
+                    <div class="card_pic">
+                        <img src="../../assets/img/slider Images/introSlider3.jpg"  />
+                    </div>
+                    <div class="card_price" (click)="next()">
+                        <span class="disount"> Skip </span>
+                    </div>
+                </div>
+                <div class="sub-body">
+                </div>
+                <div class="foot-body">
+                    <div class="maintextslide3">Order from the best local resturants</div>
+                    <div class="smalltext">
+                        <h6>Lorem ipsum is simply dummy text of the printing and tyesetting industry. Lorem Ipsum...
+                        </h6>
+                    </div>
+                    <div class="footer">
+                        <div class="btn">
+                            <ion-button class="bton" fill="clear" color="light" (click)="next()">
+                                NEXT
+                            </ion-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

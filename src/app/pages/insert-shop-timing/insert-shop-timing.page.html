@@ -1,0 +1,37 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start" (click)="back()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </div>
+        <div class="text_logo">
+            Shop Timing
+        </div>
+    </div>
+</div>
+<ion-content>
+    <div class="mainLinks">
+        <ion-card class="cardMainLinks">
+            <ion-item>
+                <ion-label position="floating" style="color: #fb630f;">Opening Time</ion-label>
+                <ion-datetime class="inputField" display-format="hh:mm A" name="l_openingTime"
+                    [(ngModel)]="l_openingTime" (keyup)="formValidation()" (ionChange)="formValidation()">
+                </ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating" style="color: #fb630f;">Closing Time</ion-label>
+                <ion-datetime class="inputField" display-format="hh:mm A" name="l_closingTime"
+                    [(ngModel)]="l_closingTime" (keyup)="formValidation()" (ionChange)="formValidation()">
+                </ion-datetime>
+            </ion-item>
+            <div class="footer">
+                <div class="btn">
+                    <ion-button class="bton" fill="clear" color="light"
+                        [ngClass]="isbtnDisabled ? 'btn-disabled': 'btn-enable'"
+                        [attr.disabled]="isbtnDisabled? true:null" (click)="gotoDiscount()">
+                        Next
+                    </ion-button>
+                </div>
+            </div>
+        </ion-card>
+    </div>
+</ion-content>

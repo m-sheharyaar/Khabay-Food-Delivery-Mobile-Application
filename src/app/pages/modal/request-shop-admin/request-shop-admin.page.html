@@ -1,0 +1,37 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start" (click)="back()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </div>
+        <div class="text_logo">
+            Request Shop Admin
+        </div>
+    </div>
+</div>
+<ion-content>
+    <div class="mainLinks">
+        <ion-card class="cardMainLinks">
+            <div class="text">
+                Please read these terms and conditions of service carefully before you launch mobile products, services
+                or
+                applications provided by Liberty University. These terms and conditions of service represent the
+                agreement
+                (“Agreement”) between you and Liberty University, Inc. (“Liberty University”) with respect to the
+                Liberty
+                University application service (the “Liberty University Service” or “Service”).
+            </div>
+            <div class="check_box" (click)="chkAgreed()">
+                <!-- <ion-checkbox [(ngModel)]="checkbox" ></ion-checkbox><span>I Agree Term and Condition</span> -->
+                <input type="checkbox" [(ngModel)]="checkbox"><span>I Agree Term and Condition</span>
+            </div>
+        </ion-card>
+    </div>
+    <div class="footer">
+        <div class="btn">
+            <ion-button class="bton" fill="clear" color="light" [disabled]="disabled"
+                (click)="insertUpdateUserShopAdminRole()">
+                Done
+            </ion-button>
+        </div>
+    </div>
+</ion-content>

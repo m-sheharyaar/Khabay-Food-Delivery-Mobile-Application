@@ -1,0 +1,33 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start" (click)="closeModel()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </div>
+        <div class="text_logo">
+            Add About
+        </div>
+    </div>
+</div>
+<ion-content>
+    <div class="mainLinks">
+        <ion-card class="cardMainLinks">
+            <div class="name">
+                <ion-item>
+                    <ion-input type="text" #input class="name-text" required name="l_description"
+                        [(ngModel)]="l_description" maxlength="100" (input)="getLength($event.target.value,100)"
+                        (keyup)="formValidation()" (ionChange)="formValidation()"></ion-input>
+                    <div class="name-edit">{{maxlength}}</div>
+                </ion-item>
+            </div>
+            <div class="footer">
+                <div class="btn">
+                    <ion-button class="bton" fill="clear" color="light"
+                        [ngClass]="isbtnDisabled ? 'btn-disabled': 'btn-enable'"
+                        [attr.disabled]="isbtnDisabled? true:null" (click)="updateAbout()">
+                        OK
+                    </ion-button>
+                </div>
+            </div>
+        </ion-card>
+    </div>
+</ion-content>

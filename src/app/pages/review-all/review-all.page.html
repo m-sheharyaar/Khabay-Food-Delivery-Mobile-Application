@@ -1,0 +1,48 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start" (click)="goBack()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </div>
+        <div class="text_logo">
+            {{l_shopName}}
+        </div>
+    </div>
+</div>
+<ion-content>
+    <div class="tab-panel">
+        <h4 class="review-count-title">
+            <span class="commentLink">
+                Rating & Review ({{l_totalreview}})
+            </span>
+        </h4>
+        <div class="review_main">
+            <div class="review" *ngFor="let row of l_reviewList">
+                <div class="review-image">
+                    <ion-avatar class="picText" slot="start" *ngIf="row.ImageUrl === null">
+                        {{commonService.profileTextLetter(row.FirstName, row.LastName)}}
+                    </ion-avatar>
+                    <ion-avatar class="pic" slot="start" *ngIf="row.ImageUrl != null">
+                        <ion-img src="{{env.imageURL + row.ImageUrl}}"></ion-img>
+                    </ion-avatar>
+                </div>
+                <div class="review-text">
+                    <div class="text_review">
+                        <span class="name_text">{{row.FullName}}</span>
+                        <label class="review-rating">
+                            <span *ngFor="let str of [1,2,3,4,5];">
+                                <span *ngIf="row.RatingNo >= str">
+                                    <ion-icon name="ios-star" class="star_rating_color_review">
+                                    </ion-icon>
+                                </span>
+                                <ion-icon name="ios-star" class="star_rating_review"></ion-icon>
+                            </span>
+                        </label>
+                    </div>
+                    <h6>{{commonService.convertDateTimeString(commonService.ConvertUTCToLocalDateTime(row.FeedbackDate))}}
+                    </h6>
+                    <p>{{row.Description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

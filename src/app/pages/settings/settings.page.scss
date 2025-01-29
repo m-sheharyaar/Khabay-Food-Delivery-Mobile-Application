@@ -1,0 +1,213 @@
+ion-content{
+    --background: #f5f5f5;
+}
+.maincardPic{
+    width: 100%;
+    height: 160px;
+    margin: 0px 0px 0px 0px;
+    border-radius: 0px;
+}
+.card_pic{
+        width: 100%;
+        height: 100%;
+        float: left;
+        margin:0px;
+        position: relative;
+        z-index: 90;
+        padding:0px;
+}
+.card_price{
+    width:100%;
+    height: auto;
+    margin: 37px 0px 0px 0px;
+    float: left;
+    padding: 0px;  
+    position: absolute;
+    z-index: 100;
+label{
+    font-size: 15px; 
+    margin: 0px 0px 0px 43%;
+    color: #fff;
+    text-align: center;
+    font-family:'Poppins';
+    font-style: normal; 
+    font-variant: normal;
+    }
+} 
+.body{
+        width:100%;
+        height:100%;
+        float:left;
+        position: relative;
+}
+.sub-body{
+            width:100%;
+            height:160px;
+            background-color: #2e3842;
+            opacity: 0.9;
+            text-align:center;
+            position: absolute;
+             z-index: 90;
+             float:left;
+             bottom: 0;
+}
+.maincardProfile{
+    width: 100%;
+    height: 120px;
+    margin: 107px 0px 0px 0px;
+    position: fixed;
+    z-index: 90;
+    .profileCard{
+        width: 90%;
+        height: 100px;
+        margin: 0px auto;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 0 5px #d8d8d8 ;
+        .pic{
+            height:100px;
+            width:30%;
+            float: left;
+            margin:0px;
+         .pic-circle{
+            height: 75px;
+            width: 75px;
+            margin: 11px 20px 11px 20px;
+             position: relative;
+             text-align: center;
+             color: #fff;
+             background-color: #2e3842;
+             .text-circle{
+             margin: auto;
+             width: 100%;
+             text-align: center;
+             font-size: 25px;
+             font-weight: bold;
+             padding: 20px 10px 10px 10px;
+             text-transform: capitalize;
+             font-family: 'Poppins';
+             font-style: normal;
+             font-variant: normal;
+             }
+             .change-pic {
+                position: absolute;
+                top: 70%;
+                width: 31%;
+                height: 31%;
+                margin: 0px 0px 0px 50px;
+                border-radius: 100%;
+                text-align: center;
+                background-color: #fb630f;
+                border:#fb630f 1px solid;
+                .camera-icon{
+                    font-size: 14px;
+                    margin: 3px 3px 3px 3px;
+                }
+              }
+            }
+        }
+        .profileNameMain{
+            width: 65%;
+            height: 100px;
+            float: left;
+            text-align: left;
+            font-family: 'Poppins'; 
+            font-style: normal; 
+            font-variant: normal; 
+           .profileName{
+            width: 90%;
+            height: auto;
+            font-weight: bolder;
+            margin: 30px 0px 0px 17px;
+            font-size: 15px;
+            color: #2e3842;
+           }
+           .profileStatus{
+            width: 90%;
+            height: auto;
+            font-size: 10px;
+            font-weight: normal;
+            margin: 0px 0px 0px 19px;
+            color: #969ba1;
+           }
+        }
+    }
+}
+.mainLinks{
+    width: 100%;
+    height: auto;
+    margin: 60px 0px 0px 0px;
+    .cardMainLinks{
+        width: 90%;
+        height: auto;
+        margin: 0px auto;
+        background-color: white;
+        border-radius: 15px;
+        padding: 0px 15px 20px 15px;
+        box-shadow: 0 0 5px #d8d8d8 ;
+    }
+    .list{
+        padding:0px;
+        .list-menu{
+            color: #2e3842;
+            font-size: 13px;
+            padding: 10px 0px 9px 0px;
+            border-bottom: 0.7px solid #969ba1;
+            list-style-type: none;
+            background-color:#fff;
+            float: left;
+            width: 100%;
+            height: auto;
+            label{
+            width: auto;
+            font-weight: bold;
+            font-size: 11px;
+            text-align: left;
+            font-family: 'Poppins'; 
+            font-style: normal; 
+            font-variant: normal;
+            padding: 0px 0px 0px 10px;
+            }
+            .goicon{
+                color:#969ba1;
+                font-size: 13px;
+                float: right;
+                transform: rotate(180deg);
+             }
+            ion-icon{
+                margin-top: 2px;
+                float: left;
+                font-size: 12px;
+                color: #fb630f; 
+            }
+            .icon{
+                float: left;  
+            }
+            .span-text{
+              float: left;
+              color: #fb630f;
+              font-style: none;
+            }
+            .span-text-color{
+                color: #D3D3D3;  
+                float: left;
+                font-style: none !important;
+            }
+            span{ 
+             float: right;
+            }  
+            .pending{
+                color: #969ba1;
+                float: right;
+                font-style: italic;
+            }
+            .span-color{
+                color: red;
+                float: right;
+            }
+        }
+    }
+}
+.hideAdminMenu{
+    display: none;
+}

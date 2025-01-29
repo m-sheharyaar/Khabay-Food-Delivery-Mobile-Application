@@ -1,0 +1,16 @@
+.main{
+    width: 100%;
+    height:auto;
+    float: left;
+    .delete-icon{
+        float:left;
+        font-size: 26px;
+        width: 13%;
+    }
+    .delete-text{
+        font-weight:bold;
+        float: left;
+        margin: 5px 0px 0px 0px;
+        width: 87%;  
+    }
+}

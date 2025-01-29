@@ -1,0 +1,66 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start" (click)="goBack()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </div>
+        <div class="text_logo">
+            Notifications
+        </div>
+    </div>
+</div>
+<ion-content [ngClass]="l_notficationAll != 0 ? '': 'main'">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+            refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div class="tab-panel">
+        <div class="review_main">
+            <div class="review" *ngFor="let row of l_notfication; let i=index" tappable text-wrap
+                (click)=!selection?hndClick($event,row.NotificationID,row.ShopName,0):selectItem(i,row)
+                (press)=selectItem(i,row) [ngStyle]="{'background-color': row.isSelected ? '#f5f5f5' : 'white'}">
+                <div class="review-image">
+                    <ion-avatar class="picText" slot="start" *ngIf="row.ImageURL === null">
+                        <ion-img src="../../../assets/img/notfound.png"></ion-img>
+                    </ion-avatar>
+                    <ion-avatar class="pic" slot="start" *ngIf="row.ImageURL != null">
+                        <ion-img src="{{env.imageURL + row.ImageURL}}"></ion-img>
+                    </ion-avatar>
+                </div>
+                <div class="review-text">
+                    <div class="text_review">
+                        <span class="name_text">{{row.ShopName}}</span>
+                    </div>
+                    <h6>{{commonService.convertDateTimeString(commonService.ConvertUTCToLocalDateTime(row.CreatedDate))}}
+                    </h6>
+                    <p>{{row.Description}}</p>
+                    <div class="card_more" [hidden]="l_hdnCheckbox">
+                        <ion-checkbox [checked]="row.isSelected"></ion-checkbox>
+                    </div>
+                    <ion-buttons class="card_more" [hidden]="l_hdnOptions"
+                        (click)="hndClick($event,row.NotificationID,row.ShopName,1)">
+                        <ion-icon name="ios-more"></ion-icon>
+                    </ion-buttons>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
+<ion-footer *ngIf="l_notficationAll != 0" class="footertext">
+    <div (click)="deleteNotification()" class="delete-text" [hidden]="l_hdnCheckbox">
+        <ion-button fill="clear" color="light" class="btn">
+            Delete ({{l_deleteCount}})
+        </ion-button>
+    </div>
+    <div (click)="notificationRemove(0, true)" class="delete-text" [hidden]="l_hdnOptions">
+        <ion-button fill="clear" color="light" class="btn">
+            <span class="spn-removeAll">
+                <ion-icon name="ios-trash"></ion-icon>
+            </span><span>Remove All</span>
+        </ion-button>
+    </div>
+</ion-footer>

@@ -1,0 +1,64 @@
+<ion-content class="cont">
+    <!-- <div class="backbtn">
+        <ion-buttons slot="start" style="float:left;">
+            <ion-button (click)="goBack()">
+                <ion-icon name="ios-arrow-back" class="backicon"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </div> -->
+    <div class="main">
+        <div class="logo">
+            <ion-img src="../../assets/img/logo.png"></ion-img>
+        </div>
+        <div class="mainLinks">
+            <ion-card class="cardMainLinks">
+                <div class="names">
+                    <ion-item class="fname">
+                        <ion-label position="floating" style="color: #fb630f;">First Name</ion-label>
+                        <ion-input class="inputField" type="text" name="FirstName" [(ngModel)]="userVm.user.FirstName"
+                            (keyup)="onKeyUp($event)" maxlength="20"
+                            (ngModelChange)="userVm.user.FirstName=getFirstLetterCapital(userVm.user.FirstName)"
+                            (ionChange)="formValidation()"></ion-input>
+                    </ion-item>
+                    <ion-item class="lname">
+                        <ion-label position="floating" style="color: #fb630f;">Last Name</ion-label>
+                        <ion-input class="inputField" type="text" name="LastName" [(ngModel)]="userVm.user.LastName"
+                            maxlength="20"
+                            (ngModelChange)="userVm.user.LastName=getFirstLetterCapital(userVm.user.LastName)"
+                            (keyup)="onKeyUp($event)" (ionChange)="formValidation()"></ion-input>
+                    </ion-item>
+                </div>
+                <ion-item class="item_bg_transp">
+                    <div class="main_text">
+                        <div class="text">
+                            <ion-label position="floating" style="color: #fb630f;">User Name</ion-label>
+                            <ion-input class="inputField" type="text" name="UserName" [(ngModel)]="userVm.user.UserName"
+                                max="10" maxlength="10" (input)="l_usernameLength=getLength($event.target.value,10)"
+                                (keyup)="onKeyUp($event)"></ion-input>
+                        </div>
+                        <div class="textLength">
+                            {{l_usernameLength}}
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="item_bg_transp">
+                    <ion-label position="floating" style="color: #fb630f;">Number</ion-label>
+                    <ion-input class="inputField" type="text" name="l_phoneNo" [(ngModel)]="l_phoneNo"
+                        (keyup)="formValidation()" readonly>
+                    </ion-input>
+                </ion-item>
+            </ion-card>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="btn">
+            <ion-button (click)="addUser()" class="bton" fill="clear" color="light"
+                [attr.disabled]="isbtnDisabled? true:null">
+                NEXT
+            </ion-button>
+        </div>
+        <!-- <div class="foot">
+
+        </div> -->
+    </div>
+</ion-content>

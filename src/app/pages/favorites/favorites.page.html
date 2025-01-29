@@ -1,0 +1,77 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start">
+            <ion-icon name="ios-arrow-back" (click)="back()"></ion-icon>
+        </div>
+        <div class="text_logo">
+            My Favourites
+        </div>
+    </div>
+    <div class="notify" [hidden]="l_hdnOptions" (click)="openPopoverdelete($event)">
+        <ion-icon *ngIf="l_ShopList != 0 " class="notify-icon" name="ios-more" md="md-more"></ion-icon>
+    </div>
+</div>
+<ion-content *ngIf="l_ShopList == 0">
+    <div class="noFoundText">No Record Found!</div>
+</ion-content>
+<ion-content [ngClass]="l_ShopList != 0 ? 'cards-bg social-cards': 'main'">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+            refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div class="main_shops" *ngFor="let row of l_ShopList; let i=index">
+        <div class="main_card_shops" tappable text-wrap
+            (click)=!selection?hndClick($event,row.ShopID,0):selectItem(i,row) (press)=selectItem(i,row)
+            [ngStyle]="{'background-color': row.isSelected ? '#f5f5f5' : 'white'}">
+            <div class="main_card_pics_shops">
+                <div class="card_pics_shops">
+                    <img class="pic_shops" *ngIf="row.ImageURL === null" src="../../../assets/img/notfound.png">
+                    <img class="pic_shops" *ngIf="row.ImageURL != null" src="{{env.imageURL + row.ImageURL}}">
+                </div>
+            </div>
+            <ion-card class="card_main_shops">
+                <div class="card_text_shops">
+                    <div class="card_name_distance_Shop">
+                        <div class="card_name_Shop">
+                            {{commonService.getExtraTextHide(row.ShopName,'11')}}
+                        </div>
+                    </div>
+                    <div class="card_adress_shops">
+                        <ion-icon class="card_adress_shops_icon" name="pin" md="md-pin"></ion-icon>
+                        <h6>{{commonService.getExtraAddressHide(row.Address1, row.City, row.State,'36')}}</h6>
+                    </div>
+                    <div class="card_offer_shops">
+                        <div class="card_discount_shops">
+                            {{row.UptoDiscount}}% Off
+                        </div>
+                        <div class="card_distance_Shop" [hidden]="l_hdnCheckbox">
+                            <ion-checkbox class="card_distance_icon_Shop" [checked]="row.isSelected"></ion-checkbox>
+                        </div>
+                        <div class="card_distance_Shop" [hidden]="l_hdnOptions">
+                            <ion-buttons (click)="hndClick($event,row.ShopID,1)">
+                                <ion-icon name="ios-more"></ion-icon>
+                            </ion-buttons>
+                        </div>
+                    </div>
+                    <div class="card_logo_newShop">
+                        <div class="card_logo_Shop">
+                            <img class="img" src="../../assets/img/logo.png">
+                        </div>
+                    </div>
+                </div>
+            </ion-card>
+        </div>
+    </div>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
+<ion-footer class="footertext" [hidden]="l_hdnCheckbox">
+    <div (click)="removeFavourite()" class="delete-text">
+        <ion-button fill="clear" color="light" class="btn">
+            Remove ({{l_deleteCount}})
+        </ion-button>
+    </div>
+</ion-footer>

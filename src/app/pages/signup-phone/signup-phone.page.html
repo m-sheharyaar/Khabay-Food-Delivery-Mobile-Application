@@ -1,0 +1,29 @@
+<ion-content class="cont">
+    <div class="main">
+        <div class="logo">
+            <ion-img src="../../assets/img/logo.png"></ion-img>
+        </div>
+        <h5 class="app_text">Please select your country and enter a valid phone number</h5>
+        <ion-row class="round">
+            <ion-col size="7">
+                <input required class="input-num" id="phone" name="l_phoneNo" type="tel" [(ngModel)]="l_phoneNo"
+                     (keyup.enter)="insertPhoneVerificationCode()"
+                    (keyup)="formValidation()" />
+            </ion-col>
+        </ion-row>
+        <div class="app_text_small">
+            4 digits verfication code will be send to this number
+        </div>
+    </div>
+    <div class="footer">
+        <div class="btn">
+            <ion-button (click)="insertPhoneVerificationCode()" class="bton" fill="clear" color="light"
+                [attr.disabled]="isbtnDisabled? true:null">
+                NEXT
+            </ion-button>
+        </div>
+        <!-- <div class="foot">
+(countrychange)="changeSenderCountry()"
+        </div> -->
+    </div>
+</ion-content>

@@ -1,0 +1,73 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start">
+            <ion-icon name="ios-arrow-back" (click)="closeModal()"></ion-icon>
+        </div>
+        <div class="text_logo">
+            <ion-input class="title" #myInput type="text" id="shopName" placeholder="search" name="l_search"
+                [(ngModel)]="l_search" (input)="searchDropdownList()" (keyup.enter)="gotoSearchShop(l_search,0)">
+            </ion-input>
+        </div>
+    </div>
+    <div class="notify">
+        <ion-icon *ngIf="l_search == '' || l_search == null" class="notify-icon" name="search"
+            (click)="gotoSearchShop(l_search,0)"></ion-icon>
+        <ion-icon
+            *ngIf="l_searchDropdownList === true && l_search != ''  && l_search != null && l_search != 'undefined' "
+            class="notify-icon" name="close" (click)="clearSearchInput()"></ion-icon>
+    </div>
+</div>
+<ion-content *ngIf="l_searchDropdownList === true && l_search != ''  && l_search != null && l_search != 'undefined'">
+    <div class="mainLinks">
+        <ion-card class="cardMainLinks">
+            <div class="design" *ngIf="(l_shopList | searchfilter: l_search).length === 0"
+                [hidden]="l_isShopNotFound">
+                <h6>
+                    <ion-icon class="icon" name="search"></ion-icon>No item found
+                </h6>
+                <span>No search result for "{{l_search}}"</span>
+            </div>
+            <div class="name" *ngFor="let row of l_shopList | searchfilter: l_search">
+                <ion-item>
+                    <div class="name-text" (click)="gotoSearchShop(row.ShopName)">{{row.ShopName}}</div>
+                    <div class="name-edit">
+                        <ion-icon name="arrow-up" class="arrowicon" (click)="listTextSearch(row.ShopName)"></ion-icon>
+                    </div>
+                </ion-item>
+            </div>
+        </ion-card>
+    </div>
+</ion-content>
+
+<ion-content padding *ngIf="l_searchDropdownList === false || l_search === ''">
+    <div class="searchHistory">
+        <div class="main">
+            <div class="unable" *ngIf="l_searchList == '' ">
+                <h5>SEARCH HISTORY</h5>
+                <h6>CLEAR</h6>
+            </div>
+            <div *ngIf="l_searchList != '' ">
+                <h5>SEARCH HISTORY</h5>
+                <h6 (click)="clearSearchHistory('ShopSearchHistory_')">CLEAR</h6>
+            </div>
+        </div>
+        <div class="searchList" *ngFor="let items of l_searchList">
+            <span (click)="gotoSearchShop(items,1)">{{items}}</span>
+        </div>
+    </div>
+    <div *ngIf="l_shopImageList != '' ">
+        <div class="searchHistory">
+            <div class="main">
+                <h5>RECENTLY VIEWED</h5>
+                <h6 (click)="clearSearchHistory('ShopRecentlyViewed_')">CLEAR</h6>
+            </div>
+            <div class="image" *ngFor="let items of l_shopImageList">
+                <span hidden>{{items.ShopID}}</span>
+                <ion-img *ngIf="items.ImageURL === 'null'" src="../../../../assets/img/notfound.png"
+                    (click)="gotoInformation(items.ShopID)"></ion-img>
+                <ion-img *ngIf="items.ImageURL != 'null'" src="{{env.imageURL + items.ImageURL}}"
+                    (click)="gotoInformation(items.ShopID)"></ion-img>
+            </div>
+        </div>
+    </div>
+</ion-content>

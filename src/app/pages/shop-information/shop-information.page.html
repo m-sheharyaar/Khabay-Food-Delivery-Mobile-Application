@@ -1,0 +1,187 @@
+<div class="card_pic">
+    <div class="card_back"></div>
+    <div class="backbtn">
+        <ion-icon name="ios-arrow-back" (click)="goBack()" class="backicon"></ion-icon>
+        <ion-icon class="shareicon" name="share" (click)="goShare()"></ion-icon>
+        <div class="card_main">
+            <div class="card_name">
+                <div class="shop_name">
+                    {{l_shopName}}
+                </div>
+                <div class="fav-height">
+                    <div [ngClass]="l_isFavourite ? 'card_favrouite': 'card_Unfavrouite'"
+                        (click)="favourite(l_shopID, l_isFavourite)">
+                        <ion-icon name="heart"></ion-icon>
+                        <h6>({{l_favouriteCount}})</h6>
+                    </div>
+                </div>
+                <div class="fav-height">
+                    <div [ngClass]="l_subscription ? 'card_favrouite': 'card_Unfavrouite'"
+                        (click)="ShopSubscription(l_shopID, l_subscription)">
+                        <ion-icon *ngIf="l_shopAdminID != l_userID" name="notifications"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="card_dis">
+                <div class="card_dis_text">
+                    {{l_uptoDiscount}}% off
+                </div>
+                <div class="card_dis_text" *ngIf="l_BadgeTitle != null">
+                    {{l_BadgeTitle}}
+                </div>
+            </div>
+            <div class="card_reviewAndFavoruite">
+                <div class="card_reviews">Rating & Reviews
+                    <label>({{l_totalReview}})</label>
+                </div>
+            </div>
+            <div class="card_rating">
+                <span *ngFor="let str of [1,2,3,4,5];">
+                    <span *ngIf="l_rating >= str">
+                        <ion-icon name="ios-star" class="star_rating_color"></ion-icon>
+                    </span>
+                    <ion-icon name="ios-star" class="star_rating"></ion-icon>
+                </span>
+                <div class="rating">({{l_rating}})</div>
+                <div class="distance">
+                    <ion-icon class="distance-icon" name="navigate"></ion-icon>
+                    <h6>{{l_distance}} km</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="l_imageURL === null">
+        <img src="../../../assets/img/notfound.png" height="250px" width="100%" />
+    </div>
+    <div *ngIf="l_imageURL != null">
+        <img src="{{env.imageURL + l_imageURL}}" height="250px" width="100%" />
+    </div>
+</div>
+<ion-content style="z-index: -2;">
+    <div class="card_Description">
+        <div class="tab-wrap">
+                <input *ngIf="l_promotionList.length != 0" type="radio"  name="tabs" id="tab1" checked>
+                <div   *ngIf="l_promotionList.length != 0" class="tab-label-content" id="tab1-content">
+                    <label class="tab-label" for="tab1">Promotions</label>
+                     <div class="tab-content">
+                            <div class="mainLinks">
+                                <ion-card class="cardMainLinks" *ngFor="let list of l_promotionList">
+                                        <div class="list-1">
+                                                <div class="left-section">
+                                                        <div class="title">{{list.Title}}</div>
+                                                        <div class="description">{{list.Description}}</div>
+                                                    </div>
+                                                    <div class="right-section">
+                                                            <div>{{list.Price}}</div>
+                                                    </div>    
+                                        </div>
+                                </ion-card>
+                            </div>
+                        
+                    </div> 
+                </div>
+            <input type="radio" name="tabs" id="tab2" checked>
+            <div class="tab-label-content" id="tab2-content">
+                <label class="tab-label" for="tab2">About</label>
+                <div class="tab-content">
+                    <div class="content-text">
+                        <div class="about-content" (click)="navme(l_address)">
+                            <div class="address-text">
+                                <ion-icon name="ios-pin" class="arrow-icon"></ion-icon>
+                                <span>Address </span>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{l_address}}, {{l_city}}, {{l_state}}</p>
+                            </div>
+                            <div class="arrow">
+                                <ion-icon name="ios-arrow-forward" class="arrow-icon-left"></ion-icon>
+                            </div>
+                        </div>
+                        <a href="tel:{{l_mobile}}" class="tel" *ngIf="l_mobile != null">
+                            <div class="about-content">
+
+                                <div class="address-text">
+                                    <ion-icon name="ios-phone-portrait" class="arrow-icon"></ion-icon>
+                                    <span>Mobile </span>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{l_mobile}}</p>
+                                </div>
+                                <div class="arrow">
+                                    <ion-icon name="ios-arrow-forward" class="arrow-icon-left"></ion-icon>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="tel:{{l_phone}}" class="tel" *ngIf="l_phone != ''">
+                            <div class="about-content">
+                                <div class="address-text">
+                                    <ion-icon name="ios-call" class="arrow-icon"></ion-icon>
+                                    <span>LandLine </span>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{l_phone}}</p>
+                                </div>
+                                <div class="arrow">
+                                    <ion-icon name="ios-arrow-forward" class="arrow-icon-left"></ion-icon>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="about-content-time">
+                            <div class="address-text">
+                                <ion-icon name="ios-time" class="arrow-icon"></ion-icon>
+                                <span>Timings </span>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{l_openingTime}} - {{l_closingTime}}</p>
+                            </div>
+                        </div>
+                        <div class="about-content-time" *ngIf="l_description != null">
+                                <div class="address-text">
+                                    <ion-icon name="clipboard" class="arrow-icon"></ion-icon>
+                                    <span>Description </span>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{l_description}}</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="radio" name="tabs" id="tab3">
+            <div class="tab-label-content" id="tab3-content">
+                <label class="tab-label" for="tab3">Review</label>
+                <div class="tab-content">
+                    <div class="tab-panel">
+                        <h4 class="review-count-title">
+                            <span class="commentLink" (click)="openModal(l_shopID)"> Add Comments </span>
+                            <span *ngIf="l_totalReview > 0">
+                                <label class="reviewLink" (click)="viewReview()">View All</label>
+                            </span>
+                        </h4>
+                        <div class="review_main">
+                            <div class="review" *ngFor="let row of l_reviewList">
+                                <div class="review-image">
+                                    <ion-avatar class="picText" slot="start" *ngIf="row.ImageUrl === null">
+                                        {{commonService.profileTextLetter(row.FirstName, row.LastName)}}
+                                    </ion-avatar>
+                                    <ion-avatar class="pic" slot="start" *ngIf="row.ImageUrl != null">
+                                        <ion-img src="{{env.imageURL + row.ImageUrl}}"></ion-img>
+                                    </ion-avatar>
+                                </div>
+                                <div class="review-text">
+                                    <div class="text_review">
+                                        <span class="name_text">{{row.FullName}}</span>
+                                        <label class="review-rating">
+                                            <span *ngFor="let str of [1,2,3,4,5];">
+                                                <span *ngIf="row.RatingNo >= str">
+                                                    <ion-icon name="ios-star" class="star_rating_color_review">
+                                                    </ion-icon>
+                                                </span>
+                                                <ion-icon name="ios-star" class="star_rating_review"></ion-icon>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <h6>{{commonService.convertDateTimeString(commonService.ConvertUTCToLocalDateTime(row.FeedbackDate))}}
+                                    </h6>
+                                    <p>{{row.Description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide"></div>
+        </div>
+    </div>
+</ion-content>

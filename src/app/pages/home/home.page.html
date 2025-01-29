@@ -1,0 +1,382 @@
+<!-- <div [ngClass]="l_header ? 'head-main2' : 'head-main'">
+        <div class="main_menu">
+            <div class="menu" slot="start">
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </div>
+            <div class="text_logo">
+                KHABAY
+            </div>
+        </div>
+        <div class="notify" (click)="openNotifications()">
+            <ion-icon [ngClass]="l_notifyIcon ? 'notify-icon-blink' : 'notify-icon'" name="notifications"></ion-icon>
+        </div>
+    </div> -->
+<div [ngClass]="l_header ? 'head-main2' : 'head-main'">
+    <div class="main_menu">
+        <div class="search-bar" (click)="openModal()">
+            <div class="bar">
+                <ion-icon class="searchicon" name="search"></ion-icon>
+                <div class="stext">
+                    Search
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notify" (click)="openNotifications()">
+        <ion-icon [ngClass]="l_notifyIcon ? 'notify-icon-blink' : 'notify-icon'" name="notifications"></ion-icon>
+    </div>
+</div>
+<ion-content [scrollEvents]="true" (ionScrollStart)="scrollHandler($event)" (ionScroll)="contenthandeler($event)">
+    <!-- <div class="main-text">
+        DISCOVER
+        <p class="main-text_small">new tasting experiences for you.</p>
+    </div> -->
+    <!-- <div class="search-bar" (click)="openModal()">
+        <div class="bar">
+            <ion-icon class="searchicon" name="search"></ion-icon>
+            <div class="stext">
+                Search
+            </div>
+        </div>
+    </div> -->
+    <div class="main">
+        <div class="specialoffer">
+            <ion-slides #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)"
+                (ionSlideTouchEnd)="slidesDidLoad(mySlider)" [options]="sliderConfig">
+                <ion-slide *ngFor="let row of l_featuredShopList" (click)="gotoInformation(row.ShopID)">
+                    <ion-card class="maincard">
+                        <div class="body">
+                            <div class="card_pic">
+                                <ion-img *ngIf="row.ImageURL === null" src="../../../assets/img/notfound.png"
+                                    (click)="gotoInformation(row.ShopID)"></ion-img>
+                                <ion-img *ngIf="row.ImageURL != null" src="{{env.imageURL + row.ImageURL}}"
+                                    (click)="gotoInformation(row.ShopID)"></ion-img>
+                            </div>
+                            <div class="card_price">
+                                <span class="disount">{{row.UptoDiscount}}% off </span>
+                            </div>
+                        </div>
+                        <div class="sub-body">
+                        </div>
+                        <div class="foot-body">
+                            <div class="shopName">{{commonService.getExtraTextHide(row.ShopName,'11')}}</div>
+                            <div class="adress">
+                                <ion-icon name="pin" md="md-pin" class="adress_icon"></ion-icon>
+                                <h6>{{commonService.getExtraAddressHide(row.Address1, row.City, row.State, '31')}}</h6>
+                            </div>
+                        </div>
+                    </ion-card>
+                </ion-slide>
+            </ion-slides>
+        </div>
+        <div class="specialoffer">
+            <h5>Hot Offers
+                <span class="viewall" (click)="viewShopList(l_hotDiscountList)">
+                    View All ({{l_hotDiscountList.length}})
+                </span>
+            </h5>
+            <ion-slides class="slid" [options]="sliderConfigFeatureShop">
+                <ion-slide *ngFor="let row of l_hotDiscountList" (click)="gotoInformation(row.ShopID)">
+                    <div class="card_main_pic">
+                        <div class="card_main_pics">
+                            <div class="card_pics">
+                                <img class="pic" *ngIf="row.ImageURL === null" src="../../../assets/img/notfound.png">
+                                <img class="pic" *ngIf="row.ImageURL != null" src="{{env.imageURL + row.ImageURL}}">
+                            </div>
+                            <div class="card_dis">
+                                <div class="card_dis_text">
+                                    {{row.UptoDiscount}}% off
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ion-card class="card_main">
+                        <div class="card_text">
+                            <div class="card_name_distance">
+                                <div class="card_name">
+                                    {{commonService.getExtraTextHide(row.ShopName,'13')}}
+                                </div>
+                                <div class="card_distance">
+                                    <ion-icon class="card_distance_icon" name="navigate"></ion-icon>
+                                    <h6>{{row.distance}} Km</h6>
+                                </div>
+                            </div>
+                            <div class="card_adress">
+                                <ion-icon name="pin" md="md-pin" class="card_adress_icon"></ion-icon>
+                                <h6>{{commonService.getExtraAddressHide(row.Address1, row.City, row.State,'23')}}</h6>
+                            </div>
+                            <div class="card_mainRating">
+                                <div class="card_rating">
+                                    <span *ngFor="let str of [1,2,3,4,5];">
+                                        <span *ngIf="row.Rating >= str">
+                                            <ion-icon name="ios-star" class="star_rating_color"></ion-icon>
+                                        </span>
+                                        <ion-icon name="ios-star" class="star_rating"></ion-icon>
+                                    </span>
+                                </div>
+                                <label>({{row.Rating}})</label>
+                            </div>
+                            <div class="card_logo_FeaturedShop">
+                                <img class="img" *ngIf="row.LogoURL === null" src="../../assets/img/logo.png">
+                                <img class="img" *ngIf="row.LogoURL != null" src="{{env.imageURL + row.LogoURL}}">
+                            </div>
+                        </div>
+                    </ion-card>
+                </ion-slide>
+            </ion-slides>
+        </div>
+        <div class="specialoffer" *ngIf="l_promotionList.length != 0">
+                <h5>Promotions
+                        <span class="viewall" (click)="viewShopList(l_promotionList)">
+                            View All ({{l_promotionList.length}})
+                        </span>
+                    </h5>
+            <ion-slides class="slid" [options]="sliderConfigFeatureShop">
+                <ion-slide *ngFor="let row of l_promotionList" (click)="gotoInformation(row.ShopID)">
+                    <ion-card class="maincard">
+                        <div class="body">
+                            <div class="card_pic">
+                                <ion-img *ngIf="row.ImageURL === null" src="../../../assets/img/notfound.png"
+                                    (click)="gotoInformation(row.ShopID)"></ion-img>
+                                <ion-img *ngIf="row.ImageURL != null" src="{{env.imageURL + row.ImageURL}}"
+                                    (click)="gotoInformation(row.ShopID)"></ion-img>
+                            </div>
+                            <div class="card_price">
+                                <span class="disount">{{row.BadgeTitle}}</span>
+                                <span class="disount2">{{row.ShopName}}</span>
+                            </div>
+                        </div>
+                        <div class="sub-body">
+                        </div>
+                        <div class="foot-body">
+                            <div class="shopName">{{commonService.getExtraTextHide(row.Title,'11')}}</div>
+                            <div class="adress">
+                                <h6>{{commonService.getExtraTextHide(row.Description,'23')}}</h6>
+                            </div>
+                        </div>
+                    </ion-card>
+                </ion-slide>
+            </ion-slides>
+        </div>
+        <!-- <div class="specialoffer">
+            <h5>Promotions
+                <span class="viewall" (click)="viewShopList(l_promotionList)">
+                    View All ({{l_promotionList.length}})
+                </span>
+            </h5>
+            <ion-slides class="slid" [options]="sliderConfigFeatureShop">
+                <ion-slide *ngFor="let row of l_promotionList" (click)="gotoInformation(row.ShopID)">
+                    <div class="card_main_pic">
+                        <div class="card_main_pics">
+                            <div class="card_pics">
+                                <img class="pic" src="../../../assets/img/notfound.png">
+                                <img class="pic" *ngIf="row.ImageURL != null" src="{{env.imageURL + row.ImageURL}}">
+                            </div>
+                            <div class="card_dis">
+                                <div class="card_dis_text">
+                                    {{row.BadgeTitle}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ion-card class="card_main">
+                        <div class="card_text">
+                            <div class="card_name_distance">
+                                <div class="card_name">
+                                    {{commonService.getExtraTextHide(row.Title,'13')}}
+                                </div>
+                                <div class="card_distance">
+                                    <ion-icon class="card_distance_icon" name="navigate"></ion-icon>
+                                    <h6>{{row.distance}} Km</h6>
+                                </div>
+                            </div>
+                            <div class="card_adress">
+                                <ion-icon name="pin" md="md-pin" class="card_adress_icon"></ion-icon>
+                                <h6>{{commonService.getExtraTextHide(row.Description,'23')}}</h6>
+                            </div>
+                            <div class="card_mainRating">
+                                 <div class="card_rating">
+                                    <span *ngFor="let str of [1,2,3,4,5];">
+                                        <span *ngIf="row.Rating >= str">
+                                            <ion-icon name="ios-star" class="star_rating_color"></ion-icon>
+                                        </span>
+                                        <ion-icon name="ios-star" class="star_rating"></ion-icon>
+                                    </span>
+                                </div>
+                                <label>{{row.Price}}</label>
+                            </div>
+                            <div class="card_logo_FeaturedShop">
+                                <img class="img" src="../../assets/img/logo.png">
+                                <img class="img" *ngIf="row.LogoURL != null" src="{{env.imageURL + row.LogoURL}}">
+                            </div>
+                        </div>
+                    </ion-card>
+                </ion-slide>
+            </ion-slides>
+        </div> -->
+        <div class="specialoffer">
+            <h5>New on Khabay
+                <span class="viewall" (click)="viewShopList(l_newShopList)">
+                    View All ({{l_newShopList.length}})
+                </span>
+            </h5>
+            <ion-slides class="slid" [options]="sliderConfigFeatureShop">
+                <ion-slide *ngFor="let row of l_newShopList" (click)="gotoInformation(row.ShopID)">
+                    <div class="card_main_pic">
+                        <div class="card_main_pics">
+                            <div class="card_pics">
+                                <img class="pic" *ngIf="row.ImageURL === null" src="../../../assets/img/notfound.png">
+                                <img class="pic" *ngIf="row.ImageURL != null" src="{{env.imageURL + row.ImageURL}}">
+                            </div>
+                            <div class="card_dis">
+                                <div class="card_dis_text">
+                                    {{row.UptoDiscount}}% off
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ion-card class="card_main">
+                        <div class="card_text">
+                            <div class="card_name_distance">
+                                <div class="card_name">
+                                    {{commonService.getExtraTextHide(row.ShopName,'13')}}
+                                </div>
+                                <div class="card_distance">
+                                    <ion-icon class="card_distance_icon" name="navigate"></ion-icon>
+                                    <h6>{{row.distance}} Km</h6>
+                                </div>
+                            </div>
+                            <div class="card_adress">
+                                <ion-icon name="pin" md="md-pin" class="card_adress_icon"></ion-icon>
+                                <h6>{{commonService.getExtraAddressHide(row.Address1, row.City, row.State,'23')}}</h6>
+                            </div>
+                            <div class="card_mainRating">
+                                <div class="card_rating">
+                                    <span *ngFor="let str of [1,2,3,4,5];">
+                                        <span *ngIf="row.Rating >= str">
+                                            <ion-icon name="ios-star" class="star_rating_color"></ion-icon>
+                                        </span>
+                                        <ion-icon name="ios-star" class="star_rating"></ion-icon>
+                                    </span>
+                                </div>
+                                <label>({{row.Rating}})</label>
+                            </div>
+                            <div class="card_logo_FeaturedShop">
+                                <img class="img" *ngIf="row.LogoURL === null" src="../../assets/img/logo.png">
+                                <img class="img" *ngIf="row.LogoURL != null" src="{{env.imageURL + row.LogoURL}}">
+                            </div>
+                        </div>
+                    </ion-card>
+                </ion-slide>
+            </ion-slides>
+            <!-- <ion-slides class="slid_newShop" [options]="sliderConfigShopOffers">
+                <ion-slide *ngFor="let row of l_newShopList" (click)="gotoInformation(row.ShopID)">
+                    <div class="card_main_pic_newShop">
+                        <div class="card_main_pics_newShop">
+                            <div class="card_pics_newShop">
+                                <img class="pic_newShop" *ngIf="row.ImageURL === null"
+                                    src="../../../assets/img/notfound.png">
+                                <img class="pic_newShop" *ngIf="row.ImageURL != null"
+                                    src="{{env.imageURL + row.ImageURL}}">
+                            </div>
+                            <div class="card_dis_newShop">
+                                <div class="card_dis_text_newShop">
+                                    {{row.UptoDiscount}}% off
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ion-card class="card_main_newShop" >
+                        <div class="card_text_newShop">
+                            <div class="card_name_distance_newShop">
+                                <div class="card_name_newShop">
+                                    {{commonService.getExtraTextHide(row.ShopName,'9')}}
+                                </div>
+                                <div class="card_distance_newShop">
+                                    <ion-icon class="card_distance_icon_newShop" name="navigate"></ion-icon>
+                                    <h6>{{row.distance}} Km</h6>
+                                </div>
+                            </div>
+                            <div class="card_adress_newShop">
+                                <ion-icon name="pin" md="md-pin" class="card_adress_icon_newShop"></ion-icon>
+                                <h6>{{commonService.getExtraAddressHide(row.Address1, row.City, row.State,'18')}}</h6>
+                            </div>
+                            <div class="card_mainRating_newShop">
+                                <div class="card_rating_newShop">
+                                    <span *ngFor="let str of [1,2,3,4,5];">
+                                        <span *ngIf="row.Rating >= str">
+                                            <ion-icon name="ios-star" class="star_rating_color"></ion-icon>
+                                        </span>
+                                        <ion-icon name="ios-star" class="star_rating"></ion-icon>
+                                    </span>
+                                </div>
+                                <label>({{row.Rating}})</label>
+                            </div>
+                            <div class="card_logo_newShop">
+                                <img class="img" src="../../assets/img/logo.png">
+                        </div>
+                        </div>
+                    </ion-card>
+                </ion-slide>
+            </ion-slides> -->
+        </div>
+        <div class="specialoffer">
+            <h6 class="shop_text">Shops
+                <span class="viewall" (click)="viewShops()">
+                    View All ({{l_shopList.length}})
+                </span>
+            </h6>
+            <div class="main_shops" *ngFor="let row of l_shopList" (click)="gotoInformation(row.ShopID)">
+                <div class="main_card_pics_shops">
+                    <div class="card_pics_shops">
+                        <img class="pic_shops" *ngIf="row.ImageURL === null" src="../../../assets/img/notfound.png">
+                        <img class="pic_shops" *ngIf="row.ImageURL != null" src="{{env.imageURL + row.ImageURL}}">
+                    </div>
+                </div>
+                <ion-card class="card_main_shops">
+                    <div class="card_text_shops">
+                        <div class="card_name_distance_Shop">
+                            <div class="card_name_Shop">
+                                {{commonService.getExtraTextHide(row.ShopName,'11')}}
+                            </div>
+                            <div class="card_distance_Shop">
+                                <ion-icon class="card_distance_icon_Shop" name="navigate"></ion-icon>
+                                <h6>{{row.distance}} Km</h6>
+                            </div>
+                        </div>
+                        <div class="card_adress_shops">
+                            <ion-icon class="card_adress_shops_icon" name="pin" md="md-pin"></ion-icon>
+                            <h6>{{commonService.getExtraAddressHide(row.Address1, row.City, row.State,'36')}}</h6>
+                        </div>
+                        <div class="card_mainRating_newShop">
+                            <div class="card_rating_newShop">
+                                <span *ngFor="let str of [1,2,3,4,5];">
+                                    <span *ngIf="row.Rating >= str">
+                                        <ion-icon name="ios-star" class="star_rating_color"></ion-icon>
+                                    </span>
+                                    <ion-icon name="ios-star" class="star_rating"></ion-icon>
+                                </span>
+                            </div>
+                            <label>({{row.Rating}})</label>
+                            <div class="card_expire_offer_shops">
+                                <span>Offer valid till</span>
+                                <div class="card_expire_offer_time_shops">
+                                    {{row.ExpiryDate == null? row.StrEndDate :commonService.getDateDayAndHour(row.ExpiryDate)}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_offer_shops">
+                            <div class="card_discount_shops">
+                                {{row.UptoDiscount}}% Off
+                            </div>
+                            <div class="card_logo_Shops">
+                                <img class="img" *ngIf="row.LogoURL === null" src="../../assets/img/logo.png">
+                                <img class="img" *ngIf="row.LogoURL != null" src="{{env.imageURL + row.LogoURL}}">
+                            </div>
+                        </div>
+                    </div>
+                </ion-card>
+            </div>
+        </div>
+    </div>
+</ion-content>

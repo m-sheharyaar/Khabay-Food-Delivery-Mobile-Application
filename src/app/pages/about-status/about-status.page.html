@@ -1,0 +1,37 @@
+<div class="head-main">
+    <div class="main_menu">
+        <div class="menu" slot="start">
+            <ion-icon name="ios-arrow-back" (click)="back()"></ion-icon>
+        </div>
+        <div class="text_logo">
+            About
+        </div>
+    </div>
+    <div class="notify" (click)="openPopover($event)">
+        <ion-icon class="notify-icon" name="ios-more" md="md-more"></ion-icon>
+    </div>
+</div>
+<ion-content>
+    <div class="mainLinks">
+        <ion-card class="cardMainLinks">
+            <h4><span>Currently</span> set to</h4>
+            <div class="name">
+                <div class="name-text">
+                    <span>{{l_AboutStatus}}</span>
+                </div>
+                <ion-icon class="name-edit" ios="ios-create" md="md-create" (click)="openModal(l_UserStatusAboutID)">
+                </ion-icon>
+            </div>
+        </ion-card>
+        <ion-card class="cardMainLinks">
+            <h4><span>Select</span> your About</h4>
+            <div class="name" *ngFor="let row of l_AboutList">
+                <div class="name-text" (click)="select(row.Description,row.UserAboutStatusID)">
+                    <span>{{row.Description}}</span>
+                </div>
+                <ion-icon name="ios-trash" class="name-edit"
+                    (click)="openPopover1($event,row.UserAboutStatusID,row.IsActive)"></ion-icon>
+            </div>
+        </ion-card>
+    </div>
+</ion-content>
