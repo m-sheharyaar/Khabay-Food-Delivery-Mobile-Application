@@ -1,5 +1,3 @@
-# Khabay-Food-Delivery-Mobile-Application
-
 # Khabay: Food Delivery Mobile Application
 
 **Khabay** is a mobile food delivery application, developed to offer users a seamless experience for ordering food from their favorite restaurants, similar to services like Foodpanda. The project includes the development of the front-end UI, integrating real-time features such as push notifications and interactive maps for restaurant locations.
